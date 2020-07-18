@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tag</title>
+
+    <!-- Set image in Background -->
+    <style>
+        /* this html property depends totally on image if image is Ok dont use it */
+        /* html
+        {
+            height:100%;
+        } */
+        body
+        {
+            background-image: url("images/wallpaper2.jpg");
+            color:black;
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Welcome you</h1>
+    <h2>This is Introduction to Image Tag</h2>
+
+    <!-- 
+        ---Path Access Mechanism---
+    image.jpg           - Same location (cwd)
+    folder/image.jpg    - folder at cwd
+    ../folder/image.jpg - parent folder of cwd  
+    -->
+
+    <!-- when image is in browser so just copy image address and paste in src -->
+    <img 
+    src="data:image/jpeg;base64,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" 
+    alt="google image 1">
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aliquid sunt asperiores! Deserunt tempore labore, exercitationem quia fugit velit molestiae excepturi quam laborum culpa recusandae harum quo earum quod facere error inventore eveniet ratione fugiat sed qui architecto? Fugit, corporis impedit enim iure numquam libero obcaecati, blanditiis autem modi vero temporibus mollitia quibusdam dicta! Sequi non, ratione magni atque doloremque aliquam assumenda ullam explicabo, et perferendis animi. Culpa similique a suscipit dolor quaerat laborum, facere dolorum veniam nesciunt deleniti commodi dolore, est veritatis quam quo illum animi delectus accusantium? Nostrum soluta eveniet architecto, hic fugit laborum dolorum asperiores iste praesentium.</p>
+
+    <!-- when image is on same location as html file -->
+    <img 
+        title = "Google logo" 
+        src="images/google image-2.jfif" 
+        alt="google image 2"
+        width = "15%" 
+        heigth = "5%"
+        style="float: right;">
+        
+        <!-- we donot use align  -->
+
+    <br><br><br><br>
+
+    <!-- when image is in any other folder other than html folder -->
+    <!-- <img src="C:\Users\gupta\Downloads\google image-3.jfif" alt="google image 3"> -->
+    
+    <br><br><br>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim asperiores incidunt doloremque natus fuga inventore quia tempora, rerum, assumenda eum in ullam cum eos amet omnis. Aut accusantium cum necessitatibus. Fugit modi dolorum inventore vitae, amet, in maxime est, facere mollitia vel consequatur quia officiis voluptatum delectus? Sequi animi similique veniam porro nisi inventore voluptate voluptatum sapiente odio, repellendus harum dolores explicabo dignissimos tempora consequuntur a iste, commodi maxime ab quos. Nostrum laborum eum commodi aliquid dicta sit incidunt suscipit. Quod minima aliquid vitae fugiat dolorem sunt. Mollitia suscipit cum vero, vitae quidem sint dolorum necessitatibus dolores laudantium ea provident!</p>
+
+    <!-- HYPERLINK of Image -->
+    <h3>IMAGE HYPERLINK </h3>
+    <h4>click on the image below and you will be redirected to google</h4>
+    <a target="_blank" href="https://google.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwllu45bX_ELyjRIaezpQIMrh2brpm1U-aUA&usqp=CAU" alt=""></a>
+    <br><br><br>
+
+</body>
+</html>
