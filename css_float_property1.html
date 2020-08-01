@@ -18,7 +18,6 @@
 
             /* becoz div is a block level tag so it takes the all the boxes one by one in next line so if we want to align the boxes in a line then we use float property */
             float: left;
-            
         }
         .box2
         {
@@ -39,8 +38,13 @@
             text-align: justify;
             /* margin: 10px; */
 
-            
+            /* By giving width is 100% thix box3 adjust itself in the space b/w box1 and box2 */
+            /* becoz box3 is no floating elements so it wants to fit in the blank space */
             width: 100%;
+
+            /* so to resolve this type of errors we use clear property */
+            
+
         }
     </style>
 
