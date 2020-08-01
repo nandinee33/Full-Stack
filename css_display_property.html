@@ -27,7 +27,14 @@
             height: 100px;
             width: 100px;
         }
+        a
+        {
+            /* Displays all inline elements into block level elements */
+            /* Thats why our anchor tag shifts to next line after applying display block property */
+            display: block;
 
+            border: solid 1px black;
+        }
     </style>
 
 </head>
@@ -55,7 +62,7 @@
     </span>
 
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi minima laboriosam, atque suscipit expedita explicabo rem <span id="span1">laborum maxime</span>
-    <br><br>
+
     <!-- # means on the same page -->
     <a href="#">this is link</a>
 
