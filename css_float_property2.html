@@ -12,7 +12,22 @@
 
             /* here float does not work so this is the issuse with the float property */
             /* clear: both; */
+
+            float: left;
+            width: 100%;
+
         }
+        
+        /*Apply it to any parent element in which you need to clear the floats.*/
+/*
+        .container::after
+        {
+            content: "";
+            display: block;
+            clear: both;
+        }
+ */
+
 
         .box1
         {
@@ -35,10 +50,12 @@
             background-color: greenyellow;
             float: left;
         }
+/* 
         .box4
         {
             clear: both;
-        }
+        } 
+*/
     </style>
 
 </head>
@@ -47,7 +64,7 @@
         <div class="box1"></div>
         <div class="box2"></div>
         <div class="box3"></div>
-        <div class="box4"></div>
+        <!-- <div class="box4"></div> -->
     </div>
 
 </body>
