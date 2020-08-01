@@ -10,7 +10,11 @@
         {
             border: 1px solid red;
 
-            /* displays all the paragraph in inline */
+            /* displays all the paragraph(block level elements) into inline */
+            /* display: inline; */
+        }
+        .para
+        {
             display: inline;
         }
 
@@ -18,17 +22,32 @@
 
 </head>
 <body>
+
     <!-- span tag is only applied in inline tags so if we did not use display property then span tag does not work here -->
     <span style="background-color: yellow;">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cum commodi id mollitia dignissimos voluptates ratione accusamus quo vel numquam? Explicabo doloribus facere maiores labore nemo? Deleniti, expedita, eos, magnam iure cum doloribus vero nostrum numquam est corrupti facilis ratione iste dicta. Velit assumenda, iste quis harum distinctio eius neque.
         </p>
-        <p>
+        <p class="para">
             hello world
         </p>
-        <p>
+
+        <!-- this text is also come along with the paragraph tag in inline mode -->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, veniam!
+        
+        <p class="para">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A nobis sit error excepturi odit itaque quos accusamus omnis quod, veritatis praesentium distinctio architecto eaque placeat! Voluptate, atque eum magnam expedita eveniet laudantium consectetur voluptatum quaerat saepe dolore error molestias quam incidunt impedit alias cum perferendis at explicabo itaque repellendus corrupti.
         </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa repellat deserunt optio molestiae iure, recusandae voluptate obcaecati aliquid repellendus illo deleniti unde porro. A, possimus quisquam. Voluptatem delectus minima officia earum, eaque distinctio. Deserunt reprehenderit rem deleniti consequatur. Fugiat, quia. Sequi voluptatibus adipisci totam minima, sapiente nulla ullam quidem placeat?
+        </p>
+
     </span>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi minima laboriosam, atque suscipit expedita explicabo rem laborum maxime deleniti.
+        
+    <!-- # means on the same page -->
+    <a href="#">this is link</a>
+
 </body>
 </html>
