@@ -16,6 +16,7 @@
         .para
         {
             display: inline;
+
         }
         #span1
         {
@@ -61,7 +62,12 @@
         #span2
         {
             /* display none will not display that text where we apply */
-            display: none;
+            /* display: none; */
+
+            
+            /* this property similar to display none */
+            /* but here hidden text space is not occupied */
+            visibility: hidden;
         }
     </style>
 
@@ -93,7 +99,7 @@
 
     <!-- # means on the same page -->
     <!-- here we use java script in onclick -->
-    <a href="#" onclick="hello()">click on this link to display text</a>
+    <a href="#" onclick="hello()">click on this link</a>
 
     <!-- since onclick is a script tag so we call script tag -->
     <script>
