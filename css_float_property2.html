@@ -9,24 +9,35 @@
         .container
         {
             border: solid black;
+
+            /* here float does not work so this is the issuse with the float property */
+            /* clear: both; */
         }
+
         .box1
         {
             height: 100px;
-            width: 100px;
+            width: 150px;
             background-color: pink;
+            float: left;
         }
         .box2
         {
             height: 100px;
-            width: 100px;
+            width: 150px;
             background-color:orange;
+            float: left;
         }
         .box3
         {
             height: 100px;
-            width: 100px;
+            width: 150px;
             background-color: greenyellow;
+            float: left;
+        }
+        .box4
+        {
+            clear: both;
         }
     </style>
 
@@ -36,6 +47,7 @@
         <div class="box1"></div>
         <div class="box2"></div>
         <div class="box3"></div>
+        <div class="box4"></div>
     </div>
 
 </body>
