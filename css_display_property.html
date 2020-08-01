@@ -92,7 +92,16 @@
     <span id="span2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi minima laboriosam, atque suscipit expedita explicabo rem </span><span id="span1">laborum maxime</span>
 
     <!-- # means on the same page -->
-    <a href="#">This is link</a>
+    <!-- here we use java script in onclick -->
+    <a href="#" onclick="hello()">click on this link to display text</a>
+
+    <!-- since onclick is a script tag so we call script tag -->
+    <script>
+        function hello()
+        {
+           document.getElementById("span2").style.display="inline";
+        }
+    </script>
 
 </body>
 </html>
