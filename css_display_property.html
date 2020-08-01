@@ -17,6 +17,16 @@
         {
             display: inline;
         }
+        #span1
+        {
+            margin: 5px;
+            padding: 5px;
+            background-color: turquoise;
+
+            /* here in span tag height and width does not work becoz height and width always work with block level elemnets */
+            height: 100px;
+            width: 100px;
+        }
 
     </style>
 
@@ -44,8 +54,8 @@
 
     </span>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi minima laboriosam, atque suscipit expedita explicabo rem laborum maxime deleniti.
-        
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi minima laboriosam, atque suscipit expedita explicabo rem <span id="span1">laborum maxime</span>
+    <br><br>
     <!-- # means on the same page -->
     <a href="#">this is link</a>
 
