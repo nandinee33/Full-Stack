@@ -34,6 +34,14 @@
         {
             border: solid red;
         }
+
+        /* Apply a pseudo element to a container element which clears the float */
+        .content::after
+        {
+            content: '';
+            display: block;
+            clear: both;
+        }
         #left-side
         {
             width: 20%;
@@ -48,6 +56,7 @@
             border: solid green;
             float: right;
         }
+
     </style>
 
 </head>
