@@ -6,6 +6,7 @@
     <title>Responsive Layout</title>
 
     <style>
+
         .container
         {
             width: 1200px;
@@ -15,7 +16,23 @@
             margin: 0px auto;  
             padding: 15px;  
         }
-        #header
+        
+
+    /*
+         Breakpoints:
+               MAX      MIN
+            1) 1201 to  ....   (Extra large screens)
+            2) 1025 to  1200   (Large screens)
+            3) 769  to  1024   (Medium large screens)
+            4) 481  to  768    (Tablet screens)
+            5) ...upto  480    (Mobile screens)
+     */
+
+        /* BREAKPOINT-1 */
+        
+        @media (min-width: 1201px)
+        {
+            #header
         {
             width: 100%;
             background-color: lightgrey;
@@ -104,6 +121,7 @@
             align-items: center;
             font-size: 40px;
             color: white;
+        }
         }
 
     </style>
