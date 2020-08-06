@@ -423,6 +423,111 @@
         }
 
 
+        /* BREAKPOINT-4 */
+
+        @media (max-width:480px)
+        {
+            #header
+        {
+            width: 100%;
+            background-color: lightgrey;
+            height: 70px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+
+            /* to make the content in center inside the header container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 40px;
+            color: white;
+        }
+        #content
+        {
+            /* border: solid red; */
+            margin-bottom: 15px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Apply a pseudo element to a left-side  element which clears the float */
+        #left-side::after
+        {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #left-side
+        {
+            width: 100%;
+            /* height: 615px; */
+            /* border: solid blue; */
+            /* float: left; */
+
+            order: 2;
+        }
+        #right-side
+        {
+            width: 100%;
+            height: 615px;
+            /* border: solid green; */
+            /* float: right; */
+            background-color: goldenrod;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+
+            order: 1;
+            margin-bottom: 15px;
+        }
+        #navigation
+        {
+            width: 100%;
+            height: 200px;
+            /* float: right; */
+            background-color: violet;
+            /* margin-bottom: 15px; */
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+        }
+        #news
+        {
+            width: 100%;
+            height: 200px;
+            /* float: left; */
+            background-color:orangered;
+            /* margin-bottom: 15px; */
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+        }
+        #footer
+        {
+            width: 100%;
+            background-color: lightblue;
+            height: 70px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+        }
+        }
+
+
     </style>
 
 </head>
