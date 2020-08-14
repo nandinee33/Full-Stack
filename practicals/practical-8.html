@@ -6,23 +6,27 @@
     <title>Practical-8</title>
 
     <style>
-        .container
+        /* .container
         {
             border: solid 6px rgb(245, 243, 243);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             width: 100%;
-        }
+        } */
         #header
         {
             width: 100%;
-            height: 100px;
+            height: 80px;
             background-color: gray;
             margin-bottom: 15px;
-            /* display: flex;
+            display: flex;
             justify-content: center;
-            align-items: center; */
+            align-items: center;
             /* font-size: 40px; */
             color: white;
+
+            /* to fix the navbar */
+            position: fixed;
+            top: 0;
         }
         h1
         {
@@ -39,6 +43,7 @@
             widows: 100vw;
             height: 100vh;
             background-image: url(img/banner-img.jpeg);
+            font-family: Arial, Helvetica, sans-serif;
             background-repeat: no-repeat;
             background-size: cover;
             font-size: 70px;
@@ -177,6 +182,19 @@
             align-items: center;
             color: white;
         }
+        ul
+        {
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            width:100%;
+            margin: auto;
+
+            /* to distribute evenly all the list in the navbar */
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
     </style>
 
 </head>
@@ -185,13 +203,14 @@
     <div class="container">
         <div id="header">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">TECHNOLOGIES</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
         </div>
+        <br><br><br><br><br><br>
         <div id="content">
 
             <div id="section1">PRACTICAL-8</div>
