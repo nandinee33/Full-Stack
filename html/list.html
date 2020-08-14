@@ -11,7 +11,7 @@
         ul
         {
             /* to change bullets */
-            list-style: disc;
+            /* list-style: disc; */
             /* list-style: square; */
             /* list-style: circle; */
             /* list-style-image: url(give image of the bullets); */
@@ -21,6 +21,12 @@
 
             /* to remove the indentation */
             padding-left: 0px;
+
+        }
+        .inside
+        {
+            list-style-position: inside;
+            background-color: lightgray;
         }
     </style>
 
@@ -49,7 +55,7 @@
     <!-- if we want to change style -->
     <!-- type = A , a, I, 1 -->
     <ol type = "A" start="24">
-        <li>C Lang</li>
+        <li class="inside">C Lang</li>
         <li>C++ Lang</li>
         <li>JAVA</li>
         <li>Python</li>
