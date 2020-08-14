@@ -6,12 +6,6 @@
     <title>Practical-8</title>
 
     <style>
-        /* .container
-        {
-            border: solid 6px rgb(245, 243, 243);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            width: 100%;
-        } */
         #header
         {
             width: 100%;
@@ -192,9 +186,29 @@
 
             /* to distribute evenly all the list in the navbar */
             display: flex;
-            justify-content: space-evenly;
+            justify-content:space-evenly;
         }
-        
+        ul li
+        {
+            /* to take the all the list in one line */
+            display: inline-block;
+        }
+        ul li a 
+        {
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            color:white;
+
+            /* to set width the of each single items */
+            /* width: 250px; */
+            text-align: center;
+        }
+        ul li a:hover
+        {
+            background-color: white;
+            color:black;
+        }
     </style>
 
 </head>
@@ -210,7 +224,7 @@
                 <li><a href="#">CONTACT</a></li>
             </ul>
         </div>
-        <br><br><br><br><br><br>
+        <br><br><br><br><br>
         <div id="content">
 
             <div id="section1">PRACTICAL-8</div>
