@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Practical-9</title>
+
+  <style>
+    
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* ----------Smooth Scroll ------ */
+    html {
+      scroll-padding-top: 70px;
+      scroll-behavior: smooth;
+    }
+
+    #container {
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+    }
+
+    /* -------------Header--------------- */
+    #header {
+      background-color: grey;
+      width: 100%;
+      height: 70px;
+      max-width: 1200px;
+      position: fixed;
+      top: 0;
+      height: 70px;
+    }
+
+
+
+    /* -------------Navigation---------------- */
+    .menu {
+      list-style: none;
+      padding: 0 20px;
+      float: right;
+    }
+    .menu li {
+      display: inline-block;
+      line-height: 70px;
+    }
+    .menu li a {
+      text-decoration: none;
+      color: white;
+      padding: 0px 20px;
+      display: block;
+      font-size: 20px;
+      text-transform: uppercase;
+      transition: 0.4s;
+    }
+    .menu li a:hover {
+      background-color: white;
+      color: black;
+    }
+    .show-btn, .hide-btn, #chk {
+      font-size: 30px;
+      line-height: 70px;
+      color: white;
+      display: none;
+      float: right;
+      padding-right: 20px;
+    }
+
+
+
+    /* ------------------Banner ------------- */
+    #banner {
+      width: 100%;
+      margin-top: 90px;
+      height: 680px;
+      background-image: url(img/banner-img.jpeg);
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 15px;
+      display: flex;
+      font-size: 40px;
+      color: white;
+    }
+    #banner h2 {
+      margin: 20px 20px;
+      color: #fff;
+    }
+
+
+    /* ------------Our Team Members ------------- */
+
+    #circle-container {
+      width: 100%;
+      margin: 15px auto;
+    }
+    #circle-container::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .circle img {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      background-color: goldenrod;
+      float: left;
+      margin-left: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+
+
+    /* -------------About Us-------------- */
+    #section2::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    #left-side {
+      width: 50%;
+      height: 550px;
+      background-color: gray;
+      float: left;
+      color: #fff;
+    }
+    #left-p>h2 {
+      text-align: left;
+      margin: 10px 5px;
+    }
+    #left-p>p {
+      font-size: 20px;
+      padding: 10px;
+      text-align: justify;
+      line-height: 28px;
+    }
+    #right-side {
+      width: 48%;
+      height: 550px;
+      float: right;
+    }
+    .artical {
+      height: 31%;
+      margin-bottom: 20px;
+      background-color: chocolate;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      overflow: hidden;
+    }
+
+    #p1 {
+      background-image: url(img/project1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #p2 {
+      background-image: url(img/project2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #p3 {
+      background-image: url(img/project3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+
+    /* --------- Technologies Used------------ */
+    #card-container {
+      width: 100%;
+      margin: 15px auto;
+    }
+    #card-container::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .card {
+      width: 20%;
+      float: left;
+      margin-left: 50px;
+      background-color: lightgrey;
+      border-radius: 8px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    }
+    .card>img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .card>h4 {
+      margin: 0px 10px;
+      text-align: center;
+    }
+    .card>p {
+      margin: 10px;
+      font-size: 15px;
+      text-align: justify;
+      line-height: 25px;
+      color: white;
+    }
+    .card>a {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff;
+      background-color: red;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    h1 {
+      color: black;
+      font-size: 40px;
+      text-align: center;
+      padding: 25px 0px;
+    }
+    .card>a:hover {
+      background-color: blue;
+    }
+
+
+
+    /* -------Footer Section ------- */
+    #footer {
+      background-color: plum;
+      height: 100px;
+    }
+    #footer>p {
+      font-size: 16px;
+      color: black;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    /* 1. First Break-point  801px - 1199px*/
+
+    @media (min-width: 801px) and (max-width: 1199px) {
+
+      /* --------------Header------------------- */
+      .menu {
+        list-style: none;
+        float: right;
+      }
+      .menu li {
+        line-height: 70px;
+        display: inline-block;
+      }
+      .menu li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 0px 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      .menu li a:hover {
+        color: black;
+        background-color: white;
+      }
+      html {
+        scroll-padding-top: 70px;
+        scroll-behavior: smooth;
+      }
+      #container {
+        width: 100%;
+      }
+      .show-btn,.hide-btn,#chk {
+        font-size: 30px;
+        line-height: 70px;
+        color: white;
+        display: none;
+        float: right;
+        padding-right: 20px;
+      }
+
+
+      /* ------Header Container-------- */
+      #header {
+        width: 100%;
+        background-color: grey;
+        position: fixed;
+        top: 0;
+        height: 70px;
+      }
+
+
+      /* ------------------Banner ------------- */
+      #banner {
+        width: 100%;
+        margin-top: 90px;
+        height: 680px;
+        margin-bottom: 15px;
+        display: flex;
+        font-size: 40px;
+        color: white;
+      }
+      #banner {
+        background-image: url(img/banner-img.jpeg);
+        background-size: cover;
+        background-position: center;
+      }
+      #banner h2 {
+        margin: 20px 20px;
+        color: #fff;
+      }
+
+
+      /* ------- Team Members ----- */
+      #circle-container {
+        width: 100%;
+      }
+      #circle-container::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .circle img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background-color: goldenrod;
+        float: left;
+        margin-left: 15%;
+        margin-bottom: 20px;
+      }
+
+
+      /* -------------About Us-------------- */
+      #section2::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      #left-side {
+        width: 50%;
+        height: 550px;
+        background-color: gray;
+        float: left;
+        color: #fff;
+      }
+      #left-p>h2 {
+        text-align: left;
+        margin: 10px 5px;
+      }
+      #left-p>p {
+        font-size: 20px;
+        padding: 10px;
+        text-align: justify;
+        line-height: 28px;
+      }
+      #right-side {
+        width: 48%;
+        height: 550px;
+        float: right;
+      }
+      .artical {
+        height: 31%;
+        margin-bottom: 20px;
+        background-color: chocolate;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        overflow: hidden;
+      }
+
+      #p1 {
+        background-image: url(img/project1.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #p2 {
+        background-image: url(img/project2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #p3 {
+        background-image: url(img/project3.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+
+      /* --------- Technologies Used------------ */
+      #card-container {
+        width: 100%;
+        margin: 15px auto;
+      }
+
+      #card-container::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .card {
+        width: 40%;
+        float: left;
+        margin-left: 65px;
+        margin-bottom: 20px;
+        background-color: lightgrey;
+        border-radius: 8px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      }
+
+      .card>img {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+
+      .card>h4 {
+        margin: 0px 10px;
+        text-align: center;
+      }
+
+      .card>p {
+        margin: 10px;
+        font-size: 20px;
+        text-align: justify;
+        line-height: 30px;
+        color: white;
+      }
+
+      .card>a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        background-color: red;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        padding: 25px 0px;
+      }
+
+      .card>a:hover {
+        background-color: blue;
+      }
+
+
+      /* -------Footer Section ------- */
+      #footer {
+        background-color: plum;
+        height: 100px;
+      }
+
+      #footer>p {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 20px;
+      }
+    }
+
+
+    /* 2. Second Break-point  800px */
+
+    @media (max-width: 800px) {
+
+      #header {
+        width: 100%;
+        background-color: grey;
+        position: fixed;
+        top: 0;
+        height: 70px;
+      }
+
+      /* -------------Navigation---------- */
+      .show-btn {
+        display: block;
+      }
+      .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        padding: 80px 0px;
+        line-height: normal;
+        transition: 0.7s;
+      }
+      .menu li {
+        display: block;
+      }
+      .manu li a {
+        display: block;
+      }
+      #chk:checked~.menu {
+        right: 0;
+      }
+      .hide-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+
+      /* -----------------Banner-------------- */
+      #banner {
+        width: 100%;
+        height: 350px;
+        margin-bottom: 15px;
+        display: flex;
+        font-size: 30px;
+        color: white;
+        margin-top: 90px;
+      }
+      #banner h2 {
+        margin: 10px 20px;
+        color: #fff;
+      }
+
+      /* --------------Our Team Members------------- */
+      #circle-container {
+        width: 100%;
+      }
+      #circle-container::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .circle img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        float: left;
+        margin-left: 10%;
+        margin-bottom: 20px;
+      }
+
+      /* ---------------About Us--------------- */
+      #left-side {
+        width: 100%;
+        height: 200px;
+        background-color: gray;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      #left-p>h2 {
+        text-align: left;
+        margin: 5px 5px;
+      }
+      #left-p>p {
+        font-size: 20px;
+        padding: 10px;
+        text-align: justify;
+        line-height: 28px;
+      }
+      #right-side {
+        width: 100%;
+        height: 400px;
+      }
+      .artical {
+        height: 31%;
+        margin-bottom: 20px;
+        background-color: chocolate;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        overflow: hidden;
+      }
+
+      #p1 {
+        background-image: url(img/project1.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #p2 {
+        background-image: url(img/project2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #p3 {
+        background-image: url(img/project3.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* --------------Technologies-------------- */
+      #card-container {
+        width: 100%;
+        margin: 15px auto;
+      }
+      #card-container::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .card {
+        width: 40%;
+        float: left;
+        margin-left: 50px;
+        background-color: lightgrey;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      }
+      .card>img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .card>h4 {
+        margin: 0px 10px;
+        text-align: center;
+      }
+      .card>p {
+        margin: 10px;
+        font-size: 15px;
+        text-align: justify;
+        line-height: 25px;
+        color: white;
+      }
+      .card>a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        background-color: red;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        padding: 25px 0px;
+      }
+    }
+
+
+      /* 3. Third Break-point min-width of 320px */
+
+      @media (max-width: 625px) {
+
+        #container {
+          min-width: 320px;
+        }
+
+        /* -------------Navigation------------ */
+        .show-btn {
+          display: block;
+        }
+        .menu {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 100%;
+          background-color: #333;
+          text-align: center;
+          padding: 80px 0px;
+          line-height: normal;
+          transition: 0.7s;
+        }
+        .menu li {
+          display: block;
+        }
+        .manu li a {
+          display: block;
+        }
+        #chk:checked~.menu {
+          right: 0;
+        }
+        .hide-btn {
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: 10px;
+        }
+
+        /* -------------Banner---------------- */
+        #banner {
+          width: 100%;
+          height: 250px;
+          margin-bottom: 15px;
+          color: white;
+          margin-top: 90px;
+        }
+        #banner h2 {
+          margin: 10px 20px;
+          color: #fff;
+          font-size: 20px;
+        }
+
+        /* --------------Team Members--------------- */
+        #circle-container {
+          width: 90%;
+          margin-left: 10%;
+        }
+        .circle img {
+          height: 70%;
+          width: 70%;
+          border-radius: 50%;
+          margin-bottom: 20px;
+        }
+
+        /* ---------------About uS-------------- */
+        #left-side {
+          width: 100%;
+          height: 200px;
+          background-color: gray;
+          color: #fff;
+          margin-bottom: 20px;
+        }
+        #left-p>h2 {
+          text-align: left;
+          margin: 5px 5px;
+        }
+        #left-p>p {
+          font-size: 20px;
+          padding: 10px;
+          text-align: justify;
+          line-height: 28px;
+        }
+        #right-side {
+          width: 100%;
+          height: 400px;
+        }
+        .artical {
+          box-sizing: border-box;
+          height: 31%;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-family: Arial, Helvetica, sans-serif;
+          color: black;
+          overflow: hidden;
+        }
+
+        #p1 {
+          background-image: url(img/project1.jpeg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        #p2 {
+          background-image: url(img/project2.jpeg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        #p3 {
+          background-image: url(img/project3.jpeg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+
+        /* -----------------Technologies---------------- */
+        #card-container {
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .card {
+          margin-left: 20px;
+          width: 90%;
+          background-color: lightgrey;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+          max-height: 500px;
+        }
+        .card>img {
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 20px;
+        }
+        .card>h4 {
+          margin: 0px 10px;
+          text-align: center;
+        }
+        .card>p {
+          margin: 10px;
+          font-size: 15px;
+          text-align: justify;
+          line-height: 25px;
+          color: white;
+        }
+        .card>a {
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          color: #fff;
+          background-color: red;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 8px;
+        }
+        h1 {
+          color: black;
+          font-size: 20px;
+          text-align: center;
+          padding-top: 25px;
+          padding-bottom: 15px;
+        }
+      }
+
+      
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+    <a name="top"></a>
+
+    <!-- ----------------------Header---------------------- -->
+    <div id="header">
+      <input type="checkbox" id="chk" />
+      <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <ul class="menu">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#circle-container">Team</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#Technologies">Technologies</a></li>
+        <li><a href="#contact">contact</a></li>
+
+        <label for="chk" class="hide-btn">
+          <i class="fa fa-times"></i>
+        </label>
+      </ul>
+    </div>
+    
+    <!-- -----------------------Banner---------------------- -->
+    <div id="banner">
+      <h2>PRACTICAL - 9</h2>
+    </div>
+
+    <!-- --------------------Team Members-------------------- -->
+    <div id="circle-container">
+      <h1>Team Members</h1>
+      <div class="circle">
+        <img src="img/lead1.jpeg" alt="" />
+      </div>
+      <div class="circle">
+        <img src="img/lead2.jpeg" alt="" />
+      </div>
+      <div class="circle">
+        <img src="img/lead3.jpeg" alt="" />
+      </div>
+      <div class="circle">
+        <img src="img/lead4.jpeg" alt="" />
+      </div>
+    </div>
+
+    <!-- -------------------------Aboutus---------------------->
+    <div id="section2">
+      <a name="about"></a>
+      <h1>About Us</h1>
+
+      <div id="left-side">
+        <div class="left-content">
+          <div id="left-p">
+            <h2>About Projects</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsa aut ea maiores temporibus quos soluta et magni tenetur sit quod, illo voluptatem corrupti, modi harum. Eos suscipit ab, delectus praesentium vitae laborum soluta molestias aperiam optio, repudiandae ex tempora dolore. Id optio aperiam, totam fugit dignissimos a nobis dolorem alias! Iste, error quod, incidunt cumque voluptatibus debitis porro, qui quidem neque provident inventore ipsam saepe unde. Illum, voluptates exercitationem labore repellendus nobis fugiat saepe molestias omnis hic quis quasi eaque quo nemo fuga iste amet debitis consectetur corporis aut facere commodi rerum iure numquam necessitatibus? Molestias porro eius asperiores eum aperiam iste, eveniet, magnam iusto odit dolor eligendi nulla qui optio pariatur numquam, cum assumenda. Libero modi a saepe laborum dolores maxime, eaque ipsa tenetur error nesciunt nobis quasi eligendi voluptates eius sint, sapiente sit, facilis similique repudiandae. Labore, ducimus ea, esse quia ratione quae explicabo sapiente ex minus itaque magnam consequuntur ab dolorum recusandae facere soluta! Libero, dolorem labore laborum, dolore odit expedita placeat, facilis consectetur odio magnam mollitia voluptatibus! Nulla obcaecati nihil deserunt eligendi officia rem consectetur eveniet odio, optio laboriosam minima laborum aperiam delectus dignissimos suscipit accusantium ipsa qui dolorem cupiditate reiciendis ratione voluptates facere provident exercitationem! Culpa velit maiores explicabo odio magnam illum nesciunt, mollitia adipisci ad, tempore id. Nulla voluptatibus sint ullam perspiciatis doloribus dolorem qui explicabo, architecto ipsam natus est ipsum! Fugit optio tenetur neque ipsam id obcaecati cumque iusto ad numquam doloribus odio blanditiis animi adipisci quam vero voluptas esse in eius, maiores veritatis? Dolor quasi placeat eaque. Voluptas inventore libero quasi ex rerum culpa iste ipsa esse quam fugiat explicabo veritatis eaque nihil harum atque illo, obcaecati beatae quis accusantium. Perferendis doloremque accusantium dolore sunt magnam error voluptate laudantium aut officiis porro laboriosam amet atque, ducimus dignissimos quibusdam odio dolorem consequuntur?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="right-side">
+        <div class="artical" id="p1">
+          <h2>Project-1</h2>
+        </div>
+        <div class="artical" id="p2">
+          <h2>Project-2</h2>
+        </div>
+        <div class="artical" id="p3">
+          <h2>Project-3</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------Technologies--------------------- -->
+    <div id="card-container">
+      <a name="Technologies"></a>
+      <h1>Technologies Used</h1>
+
+      <!-------card1 ------->
+      <div class="card">
+        <img src="img/html.png" alt="" />
+        <h4>Introduction to HTML</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A quas nihil velit enim sapiente at sint ipsum tempore dolore minus. Lorem ipsum dolor sit.
+        </p>
+        <a href="html_map.html">Read More</a>
+      </div>
+
+      <!-------card2 ------->
+      <div class="card">
+        <img src="img/css.png" alt="" />
+        <h4>Introduction to CSS</h4>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, maiores dolorem quasi voluptate consectetur reprehenderit quos blanditiis officia sit labore?
+        </p>
+        <a href="css_map.html">Read More</a>
+      </div>
+
+      <!-------card3 ------->
+      <div class="card">
+        <img src="img/JavaScript.jpg" alt="" />
+        <h4>Introduction to JavaScript</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloribus reprehenderit aliquid blanditiis saepe deleniti explicabo a itaque voluptas quaerat.
+        </p>
+        <a href="js_map.html">Read More</a>
+      </div>
+
+      <!-------card4 ------->
+      <div class="card">
+        <img src="img/bootstrap.png" alt="" />
+        <h4>Introduction to Bootstrap</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam incidunt voluptatum est nobis velit tempora quibusdam doloremque facilis laboriosam reprehenderit?
+        </p>
+        <a href="boot_map.html">Read More</a>
+      </div>
+    </div>
+
+    <!-- --------------------contact us--------------------- -->
+    <a name="contact"></a>
+    <h1>Contact</h1>
+    <div id="footer">
+      <p>
+        FullStack Website
+        <a href="https://beta-labs.in">Beta-labs</a><br /><br />
+        <a href="#top">Back to top</a>
+      </p>
+    </div>
+
+  </div>
+</body>
+
+</html>
