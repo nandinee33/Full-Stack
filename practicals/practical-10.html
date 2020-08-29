@@ -44,6 +44,8 @@
         .content{
             width: 100%;
             padding: 20px;
+            float: right;
+            transition: .7s;
         }
         .content img{
             width: 100%;
@@ -61,6 +63,11 @@
             position: fixed;
             top: 70px;
             background-color: #353b48;
+
+            /* intially side bar is */
+            left: -100%;
+
+            transition: 0.7s;
         }
         .sidebar{
             list-style: none;
@@ -104,6 +111,50 @@
             margin-top: 200px;
             padding: 15px 25px;
         }
+        
+        .show-btn, .hide-btn{
+            font-size: 35px;
+            color: white;
+            position: fixed;
+            top: 20px;
+            left: 50px;
+        }
+         
+         /* to hide the times icon*/
+        .hide-btn {
+            opacity: 0;
+        }
+
+        #chk:checked ~ .sidebar
+        {
+            left: 0;
+        }
+        #chk:checked ~ .show-btn
+        {
+            opacity: 0;
+        }
+        #chk:checked ~ .hide-btn
+        {
+            opacity: 1;
+        }
+
+        /* Whenever sidebar appears content will move towards right */
+        #chk:checked ~ .content
+        {
+            width: 80%;
+        }
+
+        @media(max-width: 768px)
+        {
+            .sidebar{
+                width: 100%;
+                text-align: center;
+            }
+            .header h1{
+                display: none;
+            }
+        }
+
     </style>
 
 </head>
@@ -144,6 +195,7 @@
 
     <div class="content">
         <img src="img/banner-img.jpeg" alt="">
+        <br>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, eveniet fugit. Natus, sunt eos repudiandae, reiciendis corrupti maiores voluptatibus et impedit sit ad eum, sapiente incidunt? Voluptatibus nemo cupiditate ad sed, quas, rem a eum, facilis qui aliquam unde labore laborum inventore! Repellendus ullam sit hic consectetur illo ipsam, aut ad id autem vero ut dolor deleniti, unde, reiciendis consequatur. Repellat beatae illum impedit numquam esse illo officia earum eius dicta. Provident itaque possimus excepturi repudiandae nobis quas asperiores, beatae voluptate dolores cum libero porro quibusdam esse aut magni fugit ex voluptates dicta voluptatem voluptatum cupiditate quia corporis. Delectus ipsam ea minus cumque doloribus, eum, qui dolorem voluptatum voluptatibus rem enim quas ratione quod. Harum quae quibusdam nesciunt veniam rem accusantium nobis neque, blanditiis eaque expedita quas maxime sunt reprehenderit laboriosam sequi veritatis non dolorem soluta facilis sed, facere cumque libero ipsa? Cum quam praesentium iste autem voluptatum vitae nobis magnam natus magni et, pariatur laboriosam molestiae ratione voluptatem provident earum modi? Praesentium sunt amet illum officia pariatur, nisi ea voluptatum veritatis voluptatibus nobis, obcaecati exercitationem? Reiciendis voluptatibus ipsum, vitae dolorem inventore dolorum sapiente nihil nostrum consequuntur est velit. Qui dolorum, enim quaerat tenetur officia quidem vel animi expedita nesciunt labore, maxime deserunt error dicta, dignissimos distinctio. Dolorem laborum ea laboriosam consectetur, harum architecto labore maxime asperiores magnam doloribus amet animi deserunt voluptas ducimus rerum natus suscipit, soluta possimus omnis eveniet sit tempore. Quo fugiat nesciunt nostrum, optio deleniti ipsum delectus quisquam quod, perspiciatis cumque temporibus doloribus. Amet similique quasi natus. Aut, minus! Aliquid ex modi vitae at ducimus amet corporis molestiae laborum dolorum quas possimus sed saepe magni, labore doloremque dicta perspiciatis aliquam consequuntur. Dicta facere magni sed animi assumenda illo ab dolorum porro officia et soluta, esse totam eveniet nesciunt omnis quae alias aliquam ex fugit debitis illum quaerat recusandae reiciendis? Aliquid incidunt, accusantium dolor amet aspernatur odit, ratione corporis, quae ipsa mollitia perferendis nihil a sit similique rerum eos modi? Libero, maiores neque. Placeat nisi ad, assumenda voluptas facilis dolorem voluptatibus quia, officia labore possimus maxime dolore ratione voluptates ea. Rem nesciunt animi sapiente quo maxime quibusdam, labore, nulla sequi laborum ducimus eum similique placeat ipsam voluptas tempora, debitis suscipit vel repellat. Perferendis dignissimos ut quibusdam illo asperiores voluptate sapiente distinctio possimus nihil soluta. Ullam odit harum enim eos, accusantium voluptatem alias necessitatibus aliquam, suscipit voluptatum beatae animi nostrum rem vel possimus sapiente ipsam quas accusamus magni placeat fugit dolorem! Esse odit magni cumque, harum perferendis blanditiis placeat error quo ducimus, rem veniam suscipit ipsa nihil at animi aut eaque, ratione quam voluptates atque. Iure aperiam optio delectus sunt nemo cupiditate veritatis soluta molestiae consequatur ex? Enim aliquam consequatur dicta esse. Esse iure aliquam eum iste nisi natus non omnis perferendis distinctio facilis excepturi ipsa a dolor explicabo delectus quibusdam possimus harum adipisci, unde vitae ullam. Itaque non numquam at, cum, eveniet quos reprehenderit quod aperiam blanditiis dignissimos placeat asperiores voluptas. A blanditiis dolor similique laudantium quo, eveniet amet ab aliquam nihil iure ea reprehenderit labore ut.
         </p>
