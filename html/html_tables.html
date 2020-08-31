@@ -9,6 +9,11 @@
         table,td,tr,th 
         {
             border: 1px solid;
+
+            /* cellpadding is space b/w content and border of that cell*/
+            /* cellspacing is space b/w 2 cells */
+            padding: 10px;
+
         }
 
         /* To hide unnecessary borders in our table*/
@@ -20,8 +25,12 @@
         /* We can change the position of caption by default caption is on top of the table */
         caption
         {
-            caption-side: bottom;
+            /* caption-side: bottom; */
+            color: red;
         }
+
+        
+
 
     </style>
 
@@ -29,7 +38,9 @@
 <body>
     
     <!-- To create table we use table tag -->
-    <table>
+    <table width = '600px' align="center">
+        <!-- we can individually add the width to cells also -->
+        <!-- table is a block level element so we can also align our table -->
 
         <!-- To add caption -->
         <caption>
@@ -39,7 +50,7 @@
         <tr>
             <!-- To create heading in our table we use th tag -->
             <th>Course Name</th>
-            <th>Course Duration</th>
+            <th width='100px'>Course Duration</th>
             <th>Course Cost</th>
         </tr>
 
