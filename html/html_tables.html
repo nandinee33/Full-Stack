@@ -50,48 +50,55 @@
             List of courses
         </caption>
 
-        <tr>
-            <!-- To create heading in our table we use th tag -->
-            <th>Course Name</th>
-            <th width='100px'>Course Duration</th>
-            <th>Course Cost</th>
-        </tr>
+        <thead>
+            <tr>
+                <!-- To create heading in our table we use th tag -->
+                <th>Course Name</th>
+                <th width='100px'>Course Duration</th>
+                <th>Course Cost</th>
+            </tr>
+        </thead>
 
-        <!-- -----------------First Row----------------------- -->
-        <!-- To create rows we use tr tag -->
-        <tr>
-            <!-- To add data to our table we use td tag -->
-            <td>Programming Languages</td>
-            <td>2 Months</td>
-            <td>Rs. 5000/-</td>
-        </tr>
+        <tbody>
+            <!-- -----------------First Row----------------------- -->
+            <!-- To create rows we use tr tag -->
+            <tr>
+                <!-- To add data to our table we use td tag -->
+                <td>Programming Languages</td>
+                <td>2 Months</td>
+                <td>Rs. 5000/-</td>
+            </tr>
 
-        <!-- ---------------------second row------------------- -->
-        <tr>
-            <td rowspan="2">Web Development</td>
-            <td>4 Months</td>
-            <td>Rs. 5000/-</td>
-        </tr>
-        <tr>
-            <td>6 Months</td>
-            <td>Rs. 15000/-</td>
-        </tr>
+            <!-- ---------------------second row------------------- -->
+            <tr>
+                <td rowspan="2">Web Development</td>
+                <td>4 Months</td>
+                <td>Rs. 5000/-</td>
+            </tr>
+            <tr>
+                <td>6 Months</td>
+                <td>Rs. 15000/-</td>
+            </tr>
 
-        <!-- ------------------------third row------------------- -->
-        <tr>
-            <td>Server Side Programming</td>
-            <td>6 Months</td>
-            <td>Rs. 25000/-</td>
-        </tr>
+            <!-- ------------------------third row------------------- -->
+            <tr>
+                <td>Server Side Programming</td>
+                <td>6 Months</td>
+                <td>Rs. 25000/-</td>
+            </tr>
+        </tbody>
 
-        <!-- ------------------------Forth row------------------- -->
-        <tr>
-            <!-- <td></td> -->
+        <tfoot>
+            <!-- ------------------------Forth row------------------- -->
+            <tr>
+                <!-- <td></td> -->
 
-            <!-- To merge the 2 cells and used as 1 cell-->
-            <td colspan="2">Total cost</td>
-            <td>Rs. 50000/-</td>
-        </tr>
+                <!-- To merge the 2 cells and used as 1 cell-->
+                <td colspan="2">Total cost</td>
+                <td>Rs. 50000/-</td>
+            </tr>
+        </tfoot>
+        
     </table>
 
 </body>
