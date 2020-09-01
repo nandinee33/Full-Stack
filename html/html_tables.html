@@ -23,6 +23,22 @@
         table
         {
             border-collapse: collapse;
+            background-color:beige;
+        }
+
+        th 
+        {
+            background-color:gray;
+            color: white;
+        }
+
+        tfoot tr
+        {
+            background-color:lightgray !important;
+        }
+        tr:nth-child(odd)
+        {
+            background-color: white;
         }
 
         /* We can change the position of caption by default caption is on top of the table */
@@ -31,9 +47,6 @@
             /* caption-side: bottom; */
             color: red;
         }
-
-        
-
 
     </style>
 
@@ -50,6 +63,9 @@
             List of courses
         </caption>
 
+        <!-- colgroup is always applied after the caption and before the semantic elements -->
+        <colgroup span="2" style="background-color:lightgreen ;"></colgroup>
+
         <thead>
             <tr>
                 <!-- To create heading in our table we use th tag -->
@@ -57,7 +73,7 @@
                 <th width='100px'>Course Duration</th>
                 <th>Course Cost</th>
             </tr>
-        </thead>
+        </thead>span
 
         <tbody>
             <!-- -----------------First Row----------------------- -->
@@ -96,7 +112,7 @@
                             <td>PHP</td>
                         </tr>
                     </table>
-                    
+
                 </td>
                 <td>6 Months</td>
                 <td>Rs. 25000/-</td>
