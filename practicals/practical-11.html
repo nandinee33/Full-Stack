@@ -12,7 +12,20 @@
         table,tr,td
         {
             border: 1px solid darkblue;
-            border-spacing: 10px;
+            /* border-spacing: 10px; */
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        .icon{
+            color:grey;
+        }
+        .edit:hover
+        {
+            color: rgb(0, 162, 255);
+        }
+        .delete:hover
+        {
+            color: rgb(228, 0, 0);
         }
         
     </style>
@@ -34,7 +47,7 @@
             <td>1</td>
             <td>Introduction to Table</td>
             <td>Delivered</td>
-            <td class="icon"><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
+            <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
 
         </tr>
 
