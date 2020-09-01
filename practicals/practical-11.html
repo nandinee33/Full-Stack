@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         table,tr,td,th
         {
             border: 1px solid darkblue;
@@ -20,17 +23,24 @@
         {
             width: 80%;
             margin: 20px auto;
+            margin-top: 70px;
+            background-color: white;
+        }
+        tr:first-child th
+        {
+            background-color: #34495e;
+            color: white;
         }
         .icon{
-            color:rgb(165, 162, 162);
+            color:#7f8c8d;
         }
         .edit:hover
         {
-            color: rgb(0, 162, 255);
+            color: #3498db;
         }
         .delete:hover
         {
-            color: rgb(228, 0, 0);
+            color:#e74c3c;
         }
         
     </style>
@@ -39,7 +49,9 @@
 <body>
     
     <table>
-
+        <tr>
+            <th colspan="4">Lecture Course Coverage</th>
+        </tr>
 
         <tr>
             <th>Sno.</th>
@@ -51,7 +63,7 @@
         <tr>
             <td>1</td>
             <td>Introduction to Table</td>
-            <td>Delivered</td>
+            <td class="Deliver">Delivered</td>
             <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
 
         </tr>
@@ -59,35 +71,35 @@
         <tr>
             <td>2</td>
             <td>HTML5 Semantic Elements</td>
-            <td>Pending</td>
+            <td class="pending">Pending</td>
             <td class="icon"><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
 
         <tr>
             <td>3</td>
             <td>Responsive Navigation Bar</td>
-            <td>Delivered</td>
+            <td class="Deliver">Delivered</td>
             <td class="icon"><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
 
         <tr>
             <td>4</td>
             <td>Responsive Side Bar</td>
-            <td>Delivered</td>
+            <td class="Deliver">Delivered</td>
             <td class="icon"><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
 
         <tr>
             <td>5</td>
             <td>CSS Animation</td>
-            <td>Pending</td>
+            <td class="pending">Pending</td>
             <td class="icon"><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
 
         <tr>
             <td>6</td>
             <td>CSS 2D and 3D Transformation</td>
-            <td>Pending</td>
+            <td class="pending">Pending</td>
             <td class="icon"><i class="fa fa-pencil"></i> <i class="fa fa-trash"></i></td>
         </tr>
     </table>
