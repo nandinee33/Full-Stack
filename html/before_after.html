@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>before after</title>
     <style>
-        
+/*         
         div 
         {
         height: 500px;
-        width: 80%;
+        width: 70%;
         position: relative;
         margin: 20px auto;
         }
 
-        /* .container {
-            background: blue;
-        } */
+        .container {
+            border: 2px black;
+        }
 
         .container:after{
             content: '';
             position: absolute;
-            width:40%;
+            width:35%;
             left:0;
             height:500px;
             background:pink;
@@ -29,15 +29,41 @@
         .container:before{
             content: '';
             position: absolute;
-            width:40%;
-            left:40%;
+            width:35%;
+            left:35%;
             height:500px;
             background:lightseagreen;
-        }
+        } */
 
+        div {
+            height: 400px;
+            position: relative;
+        }
+        
+        .c:before, .c:after {
+            content: '';
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            display: block;
+            position: absolute;
+        }
+        
+        .c:before {
+            background: #9c9e9f;
+            left: 0;
+        }
+        .c:after {
+            background: #33CCFF;
+            right: 0;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
-    <div class="container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, expedita!</div>
+    <div class="c">
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, esse?</h1>
+    </div>
 </body>
 </html>
