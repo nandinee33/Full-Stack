@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Profile</title>
+    <style type="text/css">
+        body {
+            background: #fff;
+        }
+        
+        .form-container {
+            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+            padding: 30px;
+            width: 30rem;
+            height: 15rem;
+            margin-top: 4px;
+            border-radius: 0px;
+        }
+        
+        .form-container1 {
+            background: -webkit-linear-gradient(left, #f787d5, #baf08e);
+            padding: 30px;
+            width: 30rem;
+            height: 15rem;
+            margin-top: 40px;
+            border-radius: 0px;
+        }
+        
+        .form-container2 {
+            background: -webkit-linear-gradient(right, #6b8cfa, #a4f860);
+            padding: 30px;
+            width: 30rem;
+            height: 23rem;
+            margin-top: 40px;
+            margin-bottom: 13px;
+            border-radius: 0px;
+        }
+        
+        @-webkit-keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <a class="navbar-brand" href="#">Profile</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav> -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="list-group " id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-aboutme-list" data-toggle="list" href="#list-aboutme" role="tab" aria-controls="aboutme">AboutMe</a>
+                    <a class="list-group-item list-group-item-action" id="list-dashboard-list" data-toggle="list" href="#list-dashboard" role="tab" aria-controls="dashboard">MyDashboard</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                </div>
+            </div>
+
+            <div class="col-8 ">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-aboutme" role="tabpanel" aria-labelledby="list-home-list">
+                        <div class="row">
+                            <h2><b><i><u>YOUR DETAILS</u></i></b></h2>
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">NAME</th>
+                                        <td>JAMALPUR SHIRISHA</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">EMAIL</th>
+                                        <td>jamalpurshirisha1999@gmail.com</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">CONTACT NUMBER</th>
+                                        <td colspan="2">9652230110</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">ADDRESS</th>
+                                        <td colspan="2">Hyderabad, Telangana</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GENDER</th>
+                                        <td colspan="2">Female</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">QUALIFICATION</th>
+                                        <td colspan="2">B.Tech</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">OCCUPATION</th>
+                                        <td colspan="2">Student</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">NEED OF CHARITY</th>
+                                        <td colspan="2">For continuing further Studeis</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="list-dashboard" role="tabpanel" aria-labelledby="list-dashboard-list">
+                        <div class="container my-4">
+                            <div class="row no-gutters border rounded flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                <div class="col p-4 d-flex flex-column position-static bg-light">
+                                    <strong class="d-inline-block mb-2 text-primary ">YOUR DONATIONS</strong>
+                                    <h3 class="mb-0">Last Visited</h3>
+                                    <div class="mb-1 text-muted"><i>September 2 2020</i></div>
+                                    <p class="card-text mb-auto"><i>Till now You haven;t done any donations. Please explore our portal and donate something to make someone smile</i></p>
+                                    <a class="btn btn-primary" href="#" role="button" style="width:12rem;height:2rem">Know more about Donations</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                        <section class="container">
+                            <section class="row">
+                                <section class="col order-1">
+                                    <form class="form-container">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="FullName*" value="" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Mobile No *" value="" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Address *" value="" required="required" />
+                                        </div>
+                                        <button type="submit" class="btn btn-warning">Save</button>
+                                    </form>
+                                </section>
+                            </section>
+                            <section class="row">
+                                <section class="col order-2">
+                                    <form class="form-container1">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="New MailAddress*" value="" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="NewPassword*" value="" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Confirm Password*" value="" required="required" />
+                                        </div>
+                                        <button type="submit" class="btn btn-warning">Save</button>
+                                    </form>
+                                </section>
+                            </section>
+                            <section class="row">
+                                <section class="col order-3">
+                                    <form class="form-container2">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Highest Qualification *" value="" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                        <option class="hidden"  selected disabled>Please select your Occupation You wanna change</option>
+                                                        <option>Student</option>
+                                                        <option>Creativity</option>
+                                                        <option>Agriculture</option>
+                                                    </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Readonly input here..." required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Occupation Of Family Head *" value="" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Annual Income *" value="" required="required" />
+                                        </div>
+                                        <button type="submit" class="btn btn-warning">Save</button>
+                                    </form>
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+</body>
+
+</html>

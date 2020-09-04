@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before after</title>
+    <style>
+        
+        div 
+        {
+        height: 500px;
+        width: 80%;
+        position: relative;
+        margin: 20px auto;
+        }
+
+        /* .container {
+            background: blue;
+        } */
+
+        .container:after{
+            content: '';
+            position: absolute;
+            width:40%;
+            left:0;
+            height:500px;
+            background:pink;
+        }
+        .container:before{
+            content: '';
+            position: absolute;
+            width:40%;
+            left:40%;
+            height:500px;
+            background:lightseagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, expedita!</div>
+</body>
+</html>
