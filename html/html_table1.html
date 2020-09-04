@@ -14,11 +14,15 @@
         }
         table,tr,td,th
         {
-            border-bottom: 1px solid #7f8c8d;
-            /* border-spacing: 10px; */
-            border-collapse: collapse;
-            padding: 10px;
+            /* border-bottom: 1px solid #7f8c8d; */
+            border-spacing: 0px;
+            /* border-collapse: collapse; */
+            /* padding: 10px; */
+            line-height: 40px;
             
+        }
+        .line td{
+            border-bottom: 1px solid #7f8c8d;
         }
         table
         {
@@ -28,6 +32,12 @@
             background-color: white;
             border: 2px solid #34495e;
             
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            /* border-spacing: 0px; */
+            /* border-collapse: separate; */
         }
         
         tr:nth-child(2) th
@@ -44,6 +54,8 @@
             background-color: #34495e;
             color: white;
             text-align: center;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
         }
         .pending
         {
@@ -68,6 +80,14 @@
         {
             color:#e74c3c;
         }
+        .serial
+        {
+            padding-left: 20px;
+        }
+        .sno
+        {
+            padding-left: 10px;
+        }
         
     </style>
 
@@ -80,50 +100,50 @@
         </tr>
 
         <tr>
-            <th>Sno.</th>
+            <th class="sno">Sno.</th>
             <th>Topics</th>
             <th>Status</th>
             <th>Tools</th>
         </tr>
 
-        <tr>
-            <td>1</td>
+        <tr class="line">
+            <td class="serial">1</td>
             <td>Introduction to Table</td>
             <td class="Deliver">Delivered</td>
             <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
 
         </tr>
 
-        <tr>
-            <td>2</td>
+        <tr class="line">
+            <td class="serial">2</td>
             <td>HTML5 Semantic Elements</td>
             <td class="pending">Pending</td>
             <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
         </tr>
 
-        <tr>
-            <td>3</td>
+        <tr class="line">
+            <td class="serial">3</td>
             <td>Responsive Navigation Bar</td>
             <td class="Deliver">Delivered</td>
             <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
         </tr>
 
-        <tr>
-            <td>4</td>
+        <tr class="line">
+            <td class="serial">4</td>
             <td>Responsive Side Bar</td>
             <td class="Deliver">Delivered</td>
             <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
         </tr>
 
-        <tr>
-            <td>5</td>
+        <tr class="line">
+            <td class="serial">5</td>
             <td>CSS Animation</td>
             <td class="pending">Pending</td>
             <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
         </tr>
 
         <tr>
-            <td>6</td>
+            <td class="serial">6</td>
             <td>CSS 2D and 3D Transformation</td>
             <td class="pending">Pending</td>
             <td class="icon"><i class="fa fa-pencil edit"></i> <i class="fa fa-trash delete"></i></td>
