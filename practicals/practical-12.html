@@ -37,6 +37,8 @@
         }
         h2{
             text-align: center;
+            padding: 15px;
+            font-size: 30px;
         }
         .costom-table{
             width: 100%;
@@ -70,8 +72,27 @@
         .icons{
             margin-right: 10px;
         }
-        tbody tr:nth-child(odd){
+        tbody tr:nth-child(odd),
+        tfoot tr:nth-child(odd)
+        {
             background-color: #edf3e2;
+        }
+        .signup{
+            height:100px;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin: 0px auto;
+            width: 80%;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #64548f;
+            color: white;
+            padding-top: 15px;
+            padding-bottom: 35px;
+            font-size: 18px;
         }
 
     </style>
@@ -150,12 +171,6 @@
                 </tr>
                 <tr>
                     <td><i class="fa fa-times wrong"></i></td>
-                    <td><i class="fa fa-check correct"></i></td>
-                    <td><i class="fa fa-check correct"></i></td>
-                    <td><i class="fa fa-check correct"></i></td>
-                </tr>
-                <tr>
-                    <td><i class="fa fa-times wrong"></i></td>
                     <td><i class="fa fa-times wrong"></i></td>
                     <td><i class="fa fa-check correct"></i></td>
                     <td><i class="fa fa-check correct"></i></td>
@@ -166,12 +181,14 @@
                     <td><i class="fa fa-times wrong"></i></td>
                     <td><i class="fa fa-check correct"></i></td>
                 </tr>
-                <tr>
-                    <td><a href="#">Sign Up</a></td>
-                    <td><a href="#">Sign Up</a></td>
-                    <td><a href="#">Sign Up</a></td>
-                    <td><a href="#">Sign Up</a></td>
-                </tr>
+                <tfoot>
+                    <tr>
+                        <td class="signup"><a href="#">Sign Up</a></td>
+                        <td class="signup"><a href="#">Sign Up</a></td>
+                        <td class="signup"><a href="#">Sign Up</a></td>
+                        <td class="signup"><a href="#">Sign Up</a></td>
+                    </tr>
+                </tfoot>
             </tbody>
 
         </table>
