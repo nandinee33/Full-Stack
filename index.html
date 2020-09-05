@@ -4,31 +4,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index page</title>
+
+    <!-- FONT AWASOME LINK -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- materialised icons cdn -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table,tr,td,th
+        {
+            border-spacing: 0px;
+            line-height: 40px;
+        }
+        .line td{
+            border-bottom: 1px solid #7f8c8d;
+        }
+        table
+        {
+            width: 85%;
+            margin: 20px auto;
+            margin-top: 60px;
+            background-color: white;
+            border: 2px solid #34495e;
+            
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        
+        tr:nth-child(2) th
+        {
+            text-align: left;
+            border-bottom: 3px solid #7f8c8da9;
+        }
+        tr:hover
+        {
+            background-color: #d6d6d68a;
+        }
+        tr:first-child th
+        {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+        .Unchecked
+        {
+            color: #e74c3c;
+        }
+        .Checked
+        {
+            color: #148041;
+        }
+        .icon{
+            color:#7f8c8d;
+            /* padding-left: 10px;
+            padding-right: 20px; */
+        }
+        .edit 
+        {
+            margin-right: 5px;
+        }
+        .edit:hover
+        {
+            color: #3498db;
+        }
+        .delete:hover
+        {
+            color:#e74c3c;
+        }
+        .serial
+        {
+            padding-left: 20px;
+        }
+        .sno
+        {
+            padding-left: 10px;
+        }
+        a{
+            text-decoration: none;
+            color:#7f8c8d ;
+            /* margin-right: 40px; */
+
+        }
+        a:hover{
+            color: blue;
+        }
+        .tools{
+            width: 100px;
+        }
+        .status{
+            width: 140px;
+        }
+        .links{
+            width: 130px;
+        }
+        h1{
+            text-align: center;
+            border-bottom-style: ridge;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 88%;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 20px;
+            text-align: justify;
+            background-color: #d6d6d68a;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 8px;
+            margin-top: 50px;
+            width: 85%;
+            margin: 0px auto;
+            border-bottom-style: ridge;
+        }
+        p:hover{
+            background-color: #7f8c8d67;
+            border-left: 5px solid;
+            border-bottom: 5px solid;
+        }
+        
+    </style>
+
 </head>
-<body style="background-color:navajowhite;">
-    <h1 style="color: darkgreen;">Welcome to Fullstack Course</h1>
-    
+<body>
+    <h1>Welcome to Fullstack Course</h1>
     <p>Front-end web developer is everything involved in programming the user interface of a web application. Typically it refers to the Hypertext Markup Language (HTML), Cascading Style Sheets (CSS) and JavaScript portion of web site production as opposed to the database or server-side programming. It encompasses everything from building a simple page of HTML text to creating complex, responsive HTML5 websites designed to be accessed via various different browsers, devices and screen sizes.</p>
-    
-    <h1 style="color: darkgreen;">List of Practicals</h1>
-    <p>1. Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-1.html">Practical-1</a></p>
-    
-    <p>2. Live your First Web-Page on Git-Hub.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-2.html">Practical-2</a></p>
-    
-    <p>3. Create a web page showing a basic html structure using character Entities and span Tag.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-3.html">Practical-3</a></p>
-    
-    <p>4. Create a Website having list of all praticals and their individual pratical Page links.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-4.html">Practical-4</a></p>
 
-    <p>5. Create a Web-Page showing the use of Image-Map in the Web Application.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-5.html">Practical-5</a></p>
-
-    <p>6. Create a Card Layout using CSS layout properties.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-6.html">Practical-6</a></p>
-
-    <p>7. Create a Web Page Layout using div tags.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-7.html">Practical-7</a></p>
+    <div>
+        <table>
+            <tr>
+                <th colspan="5">Fullstack Live Practical Book</th>
+            </tr>
     
-    <p>8. Create a Web Page having Fixed Navigation Bar with the given content.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-8.html">Practical-8</a></p>
-
-    <p>9. Create a Responsive Web Layout with Responsive Navigation Bar.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-9.html">Practical-9</a></p>
-
-    <p>10. Create a Responsive Side-Bar Navigation Menu.<a href="https://nandinee33.github.io/Full-Stack/practicals/practical-10.html">Practical-10</a></p>
+            <tr>
+                <th class="sno">Sno.</th>
+                <th>Practical Name</th>
+                <th  class="links">Link</th>
+                <th class="status">Status</th>
+                <th class="tools">Tools</th>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">1</td>
+                <td>Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-1.html">Practical-1</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">2</td>
+                <td>Live your First Web-Page on Git-Hub.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-2.html">Practical-2</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">3</td>
+                <td>Create a web page showing a basic html structure using character Entities and span Tag.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-3.html">Practical-3</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">4</td>
+                <td>Create a Website having list of all praticals and their individual pratical Page links.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-4.html">Practical-4</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">5</td>
+                <td>Create a Web-Page showing the use of Image-Map in the Web Application.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-5.html">Practical-5</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">6</td>
+                <td>Create a Card Layout using CSS layout properties.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-6.html">Practical-6</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">7</td>
+                <td>Create a Web Page Layout using div tags.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-7.html">Practical-7</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">8</td>
+                <td>Create a Web Page having Fixed Navigation Bar with the given content.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-8.html">Practical-8</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">9</td>
+                <td>Create a Responsive Web Layout with Responsive Navigation Bar.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-9.html">Practical-9</a></td>
+                <td class="Checked">Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">10</td>
+                <td>Create a Responsive Side-Bar Navigation Menu.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-10.html">Practical-10</a></td>
+                <td class="Unchecked">Un-Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr class="line">
+                <td class="serial">11</td>
+                <td>Create a Table that represent Live Practical Book Records .</td>
+                <td><a href="#">Practical-11</a></td>
+                <td class="Unchecked">Un-Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+    
+            <tr>
+                <td class="serial">12</td>
+                <td>Create a Custom Price Table Template.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-12.html">Practical-12</a></td>
+                <td class="Unchecked">Un-Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+        </table>
+    </div>
+    
 </body>
 </html>
