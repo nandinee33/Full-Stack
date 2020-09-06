@@ -20,7 +20,8 @@ a{
     align-items: center;
 }
 
-#left-side-box{overflow:hidden;
+#left-side-box{
+    overflow:hidden;
     background-color: white;
     border-radius: 10px;
     width:300px;
@@ -29,7 +30,8 @@ a{
     margin-right: 15px;
 }
 
-#right-side-box{overflow:hidden;
+#right-side-box{
+    overflow:hidden;
     margin-left: 15px;
     background-color: white;
     border-radius: 10px;
@@ -160,7 +162,7 @@ button:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:1fr 1fr;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 #cards img{
@@ -176,8 +178,6 @@ button:hover{
 .biobox div{
     padding:5px;
     margin:0px;
-    margin-top: 15px;
-
 }
 #cards h2{
     font-size: 14px;
@@ -194,82 +194,68 @@ button:hover{
 }
 
 #ltitle{
-  padding:10px 15px;
-  background-color:#EAECEE ;
+    padding:10px 15px;
+    background-color:#EAECEE ;
 }
 
-#menubutton{
-  width: 30px;
-  height: 30px;transition: all .6s;
-float:right;
+#edit{
+    background-color:#1d7e32d5;
+    color:white;
+    font-size: 17px;
+    padding:8px 25px;
+    border-radius:15px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    float: left;
 }
 
-#menubutton:hover{
-  cursor: pointer;transition: all .6s;
+#save{
+    background-color:#1d7e32d5;
+    color:white;
+    font-size: 17px;
+    padding:8px 25px;
+    border-radius:15px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
 }
 
-ul{
-  padding:0px;
-  margin:0px;
-  list-style: none;transition: all .6s;
-}
 
-ul li{transition: all .6s;
-  font-size: 12px;
-  color:white;
-  padding:15px 7px;
-color:#3498DB;
-text-align: center;
-
-}
-
-li:hover{
-  background-color:#3498DB;
-  cursor: pointer;
-  color:white;transition: all .3s;
-}
-#menucon{overflow: hidden;
-  transition: all .3s;
-  position: absolute;
-margin-left: 60%;
-margin-top: -20px;
-  background-color:white;
-  box-shadow:0px 0px 4px 1px rgb(53, 51, 51);
-border-radius:10px;
-
-
-}
 
 
 @media screen and (max-width: 600px) {
 
-  #main{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #cv{background-color:#EAECEE;
+    #main{
+            display: flex;
+            flex-wrap: wrap;
+    }
+    #cards{
+            background-color:#EAECEE;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr 1fr 1fr 1fr;
+    }
 
-    display: grid;
+    #left-side-box{
+            overflow:hidden;
+            background-color: white;
+            border-radius: 10px;
+            width:95%;
+            height:auto;
+            box-shadow: 0px 0px 4px 0px rgb(53, 51, 51);
+            margin: 15px;
+    }
 
-  grid-template-columns: 1fr;
-  grid-template-rows:1fr 1fr 1fr 1fr;
-  }
-
-  #left-side-box{overflow:hidden;
-    background-color: white;
-    border-radius: 10px;
-    width:95%;
-    height:auto;
-    box-shadow: 0px 0px 4px 0px rgb(53, 51, 51);
-    margin: 15px;
-  }
-
-  #right-side-box{overflow:hidden;
-    margin: 15px;
-    background-color: white;
-    border-radius: 10px;
-    width:600px;
-    height:auto;
-    box-shadow: 0px 0px 4px 0px rgb(53, 51, 51);
-  }
+    #right-side-box{
+            overflow:hidden;
+            margin: 15px;
+            background-color: white;
+            border-radius: 10px;
+            width:600px;
+            height:auto;
+            box-shadow: 0px 0px 4px 0px rgb(53, 51, 51);
+    }
 }
