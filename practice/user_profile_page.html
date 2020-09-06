@@ -4,8 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User profile</title>
 
+    <!--------------css file link--------------->
     <link rel="stylesheet" href="user_profile_page.css">
 
+    <!-- ------------font link--------------- -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="user_profile_page.js"></script>
@@ -16,99 +18,116 @@
 
     <main id="main">
 
-    <section id="left-side-box">
+        <!-- ------------------Left Side box---------------------- -->
+        <section id="left-side-box">
 
-        <div id="profile-image">
-            <img src="images_my/user.png" alt="profile image" />
-        </div>
-
-        <div id="profile-title">
-            <h1>Nandinee Gupta</h1>
-            <h2>Web Devloper</h2>
-        </div>
-
-        <div id="social">
-            <a href="#"><img src="images_my/twitter.png" id="twitter" /></a>
-            <a href="#"><img src="images_my/facebook.png" id="facebook" /></a>
-            <a href="#"><img src="images_my/ui.png" id="instagram" /></a>
-        </div>
-
-        <div id="bio">
-            <div id="bio"><img src="images/dob_icon.png" alt="dob" id="dob" />13 Oct, 2000</div>
-            <div id="location"><img src="images/location_icon.png" alt="location" id="location" />Kanpur, India</div>
-            <div id="github"><a href="https://github.com/oyeitsmg/" target="_blank"><img src="images/github_icon.png" alt="github" id="github" />GitHub</a></div>
-
-        </div>
-
-        <div id="send-email">
-            <button id="email">Save Info</button></a>
-        </div>
-
-    </section>
-
-    <section id="right-side-box">
-
-        <div id="about">
-            <h1>About me<h1><span id="bar"> </span>
-            <p> 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ratione blanditiis fuga explicabo minima saepe, rem obcaecati exercitationem? Omnis, molestiae!
-            </p>
-        </div>
-        <h1 id="ltitle">Activities and Status</h1>
-        <div id="cv">
-            <div class="biobox">
-                <div>
-                    <img src="images_my/donation.png"/>
-                </div>
-                <div>
-                    <h1>Amount Donate</h1>
-                    <h2>No amount donate to Let's Charit till now</h2>
-                </div>
+            <!-- -----------user profile image------------ -->
+            <div id="profile-image">
+                <img src="images_my/user.png"/>
             </div>
 
-            <div class="biobox">
-                <div>
-                    <img src="images_my/gift.png"/>
-                </div>
-                <div>
-                    <h1>Amount Taken</h1>
-                    <h2>No emergency or individual help taken from Let's Charit till now</h2>
-                </div>
+            <!-- -----------profile title-------------->
+            <div id="profile-title">
+                <h1>Nandinee Gupta</h1>
+                <h2>Frontend Devloper</h2>
             </div>
 
-            <div class="biobox">
-                <div>
-                    <img src="images_my/contact.png"/>
-                </div>
-                <div>
-                    <h1>Contact Info</h1>
-                    <h2>
-                        Email: guptanandinee35@gmail.com
-                        <br>
-                        mobile: 1212442957
-                        <br>
-                        address: Kanpur(U.P.)
-                    </h2>
-                </div>
+            <!-- -------------social icons-------------- -->
+            <div id="social">
+                <a href="#"><img src="images_my/twitter.png" id="twitter" /></a>
+                <a href="#"><img src="images_my/facebook.png" id="facebook" /></a>
+                <a href="#"><img src="images_my/ui.png" id="google" /></a>
             </div>
 
-            <div class="biobox">
-                <div>
-                    <img src="images_my/information.png"/>
-                </div>
-                <div>
-                    <h1>Additional Info</h1>
-                    <h2>
-                        Qualification: Btech
-                        <br>
-                        Occupation: Student
-                    </h2>
-                </div>
+            <!-- ----------------Bio----------------- -->
+            <div id="bio">
+                <div id="DOB"><img src="images_my/dob.png" id="dob" />DOB: 13 Oct, 2000</div>
+                <div id="Location"><img src="images_my/location.png" id="location" />Location: Kanpur (U.P.) India</div>
+                <div id="Gender"><img src="images_my/gender.png" id="gender" />Gender: Female</a></div>
+
             </div>
 
-        </div>
+            <!-- --------------button--------------- -->
+            <div id="back-button">
+                <a href=""><button id="back">Back</button></a>
+            </div>
+            
+        </section>
+        <!-- ----------------------left side box end--------------------------- -->
 
-    </section>
+
+        <!-- ------------------------Right side box-------------------------- -->
+        <section id="right-side-box">
+
+            <!-- ---------------About-------------- -->
+            <div id="about">
+                <h1>About me<h1><span id="horizontal-line"> </span>
+                <p> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ratione blanditiis fuga explicabo minima saepe, rem obcaecati exercitationem? Omnis, molestiae!
+                </p>
+            </div>
+
+            <!-- ------------------activities--------------- -->
+            <h1 id="ltitle">Activities and Status</h1>
+            <div id="cards">
+
+                <!-- ---------------box1-------------- -->
+                <div class="biobox">
+                    <div>
+                        <img src="images_my/donation.png"/>
+                    </div>
+                    <div>
+                        <h1>Amount Donate</h1>
+                        <h2>No amount donate to Let's Charit till now</h2>
+                    </div>
+                </div>
+
+                 <!-- ---------------box1-------------- -->
+                <div class="biobox">
+                    <div>
+                        <img src="images_my/gift.png"/>
+                    </div>
+                    <div>
+                        <h1>Amount Taken</h1>
+                        <h2>No emergency or individual help taken from Let's Charit till now</h2>
+                    </div>
+                </div>
+
+                 <!-- ---------------box1-------------- -->
+                <div class="biobox">
+                    <div>
+                        <img src="images_my/contact.png"/>
+                    </div>
+                    <div>
+                        <h1>Contact Info</h1>
+                        <h2>
+                            Email: guptanandinee35@gmail.com
+                            <br>
+                            mobile: 1212442957
+                            <br>
+                            address: Kanpur(U.P.)
+                        </h2>
+                    </div>
+                </div>
+
+                 <!-- ---------------box1-------------- -->
+                <div class="biobox">
+                    <div>
+                        <img src="images_my/information.png"/>
+                    </div>
+                    <div>
+                        <h1>Additional Info</h1>
+                        <h2>
+                            Qualification: Btech
+                            <br>
+                            Occupation: Student
+                        </h2>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ------------------Right-side-box end------------------- -->
 
     </main>
 
