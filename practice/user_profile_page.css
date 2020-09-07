@@ -3,7 +3,7 @@ h1,h2{
     margin:0px;
 }
 body{
-    background-image: linear-gradient(45deg,#89c4f4,#c5eff7,#89c4f4);
+    background-image: linear-gradient(45deg,#7abff8,#c5eff7,#7db3e0);
     font-family: 'Varela Round', sans-serif;
 }
 a{
@@ -172,11 +172,12 @@ button:hover{
 #cards img{
     width:46px;
     height: 46px;
+    margin-left: 10px;
 }
 
 #cards h1{
     font-size: 20px;
-
+    margin-left: 10px;
 }
 .biobox div{
     padding:5px;
@@ -185,13 +186,14 @@ button:hover{
 #cards h2{
     font-size: 14px;
     color:#566573;
+    margin-left: 10px;
 }
 .biobox{
     border-radius: 15px;
     padding:25px;
     margin:10px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     background-color:white ;
 }
@@ -234,7 +236,11 @@ button:hover{
 
 
 
-@media screen and (max-width: 600px) {
+    
+
+
+@media  screen and (max-width: 999px)
+{
 
     #main{
             display: flex;
@@ -262,8 +268,44 @@ button:hover{
             margin: 15px;
             background-color: white;
             border-radius: 10px;
-            width:600px;
+            width:95%;
             height:auto;
             box-shadow: 0px 0px 4px 0px rgb(53, 51, 51);
     }
 }
+
+
+/* @media screen and (max-width: 400px) 
+{
+
+    #main{
+            display: flex;
+            flex-wrap: wrap;
+    }
+    #cards{
+            background-color:#EAECEE;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr 1fr 1fr 1fr;
+    }
+
+    #left-side-box{
+            overflow:hidden;
+            background-color: white;
+            border-radius: 10px;
+            width:95%;
+            height:auto;
+            box-shadow: 0px 0px 4px 0px rgb(53, 51, 51);
+            margin: 15px;
+    }
+
+    #right-side-box{
+            overflow:hidden;
+            margin: 15px;
+            background-color: white;
+            border-radius: 10px;
+            width:95%px;
+            height:auto;
+            box-shadow: 0px 0px 4px 0px rgb(53, 51, 51);
+    }
+} */
