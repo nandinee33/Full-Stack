@@ -59,6 +59,10 @@
             text-decoration: none;
             text-transform: uppercase;
         }
+        .backtotop a:hover{
+            text-shadow: 1px 1px #ff9800;
+            font-size: 20px;
+        }
         
         .sec-2{
             display: flex;
@@ -382,6 +386,10 @@
                 font-size: 18px;
                 text-align: center;
             }
+            .copyright:hover{
+                text-shadow: 1px 1px #ff9800;
+                font-size: 20px;
+            }
             .sec-5 a{
                 text-decoration: none;
                 color: white;
@@ -433,7 +441,7 @@
                 display: flex;
                 justify-content: space-between ;
                 flex-direction: column;
-                padding: 30px 10px;
+                padding: 20px 10px;
             }
             .about-sec{
                 width: 100%;
@@ -442,7 +450,14 @@
                 font-size: 20px;
                 color: white;
                 text-transform: uppercase;
-                margin-top: 20px;
+                margin-top: 10px;
+                text-align: center;
+            }
+            .sec-2 h2:hover{
+                font-size: 22px;
+                transition: all 0.4s;
+                cursor: pointer;
+                text-shadow: 1px 1px #ff9800;
             }
             .about-sec p{
                 text-align: justify;
@@ -465,18 +480,8 @@
             }
             
             .sec-2 h2::after{
-                content: '';
-                background-color: #ff9800;
-                /* position: relative; */
-                width: 0;
-                height: 3px;
-                display: block;
-                transition: all .3s;
-                left: 0px;
-                top: -10px;
-            }
-            .sec-2 h2:hover::after{
-                width: 60px;
+                visibility: hidden;
+                z-index: -100
             }
             span{
                 color: lightgray;
@@ -570,7 +575,9 @@
                 text-decoration: none;
                 color: white;
             }
-            
+            .link-1,.link-2 , .link-3{
+                text-align: center;
+            }
         }
 
     </style>
@@ -626,7 +633,7 @@
                 <h2>Get in touch</h2>
                 <ul>
                     <li><i class="fa fa-home"></i>  <span>Kanpur, U.P. India</span></li>
-                    <li><i class="fa fa-envelope"></i>  <span>guptanandinee35@gmail.com</span></li>
+                    <li><i class="fa fa-envelope"></i>  <span>nandinee@gmail.com</span></li>
                     <li><i class="fa fa-phone-square"></i>  <span>12131547046</span></li>
                     <li><i class="fa fa-facebook-official"></i>  <span>nandineegupta</span></li>
                 </ul>
