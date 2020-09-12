@@ -95,6 +95,29 @@
             color: #ff9800;
         }
         
+        .sec-2 h2::after{
+            content: '';
+            background-color: #ff9800;
+            /* position: relative; */
+            width: 0;
+            height: 3px;
+            display: block;
+            transition: all .3s;
+            left: 0px;
+            top: -10px;
+        }
+        .sec-2 h2:hover::after{
+            width: 60px;
+        }
+        span{
+            color: lightgray;
+        }
+        i{
+            color: lightgray;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        
 
         .sec-5{
             width: 100%;
