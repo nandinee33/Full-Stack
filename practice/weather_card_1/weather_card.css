@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(images_my/thunder1.jpg);
+    /* background-image: url(weather_images/thunder.jpg); */
     height: 100vh;
     overflow: hidden;
     background-repeat: no-repeat;
