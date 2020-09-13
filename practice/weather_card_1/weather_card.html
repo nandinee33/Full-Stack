@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather card</title>
+
+    <!-- -----------css file link------- -->
+    <link rel="stylesheet" href="weather_card.css">
+
+</head>
+<body>
+
+    <!-- ------------------card start---------------------- -->
+    <div class="app-main">
+
+        <!-- -------search input box for entering the loction------- -->
+        <div class="searchInputBox">
+            <input type="text" id="input-box" class="input-box" placeholder="Enter location..." autocomplete="off">
+        </div>
+
+        <!-- -------- searched location weather details------- -->
+        <div class="weather-body">
+
+            <div class="location-details">
+                <div class="city" id="city">Amaravati, IN</div>
+                <div class="date" id="date">12 Septemper (Saturday), 2020</div>
+            </div>
+
+            <div class="weather-status">
+                <div class="temp" id="temp">34 &deg;C</div>
+                <div class="min-max" id="min-max">32 &deg;C (min) / 34 &deg;C (max)</div>
+                <div class="weather" id="weather">Clear</div>
+                <div class="img"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ----------------------card end------------------------- -->
+
+    <!-- ---------link to js-------- -->
+    <script src="weather_card.js"></script>
+
+</body>
+</html>
