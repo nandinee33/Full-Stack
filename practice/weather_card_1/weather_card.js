@@ -1,7 +1,11 @@
 // api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
 
 const weatherApi = {
+
+    // this is our generated API
     key: "bab281d79e5f1e9755a68d754cc313e7",
+
+    // this is current weather API taken from openweather.org
     baseUrl: "https://api.openweathermap.org/data/2.5/weather", 
 }
 
@@ -13,6 +17,8 @@ searchInputBox.addEventListener('keypress', (event) => {
     if(event.keyCode == 13) {
         console.log(searchInputBox.value);
         getWeatherReport(searchInputBox.value);
+
+        // to show weather body after entering the location
         document.querySelector('.weather-body').style.display = "block";
     }
 
@@ -36,6 +42,7 @@ function showWeatherReport(weather){
     let temperature = document.getElementById('temp');
     temperature.innerHTML = `${Math.round(weather.main.temp)}&deg;C`;
 
+    // we use Math.floor and Math.ceil here becoz sometimes if minimum and maximum values are almost same then floor and ceil make it different
     let minMaxTemp = document.getElementById('min-max');
     minMaxTemp.innerHTML = `${Math.floor(weather.main.temp_min)}&deg;C (min)/ ${Math.ceil(weather.main.temp_max)}&deg;C (max) `;
 
@@ -47,6 +54,7 @@ function showWeatherReport(weather){
     date.innerText = dateManage(todayDate);
 
     
+    // for changing the images according to weather
     if(weatherType.textContent == 'Clear') {
 
         document.body.style.backgroundImage = "url('weather_images/clear1.jpg')";
