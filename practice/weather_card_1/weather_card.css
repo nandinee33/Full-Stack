@@ -8,6 +8,7 @@
 
 body{
     /* background-image: url(weather_images/thunder.jpg); */
+    background-color:rgba(235, 205, 209, 0.7);
     height: 100vh;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -46,6 +47,7 @@ body{
 }
 
 .weather-body{
+    display: none;
     color: #582233;
     padding: 20px;
     line-height: 2rem;

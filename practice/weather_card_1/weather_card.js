@@ -48,27 +48,40 @@ function showWeatherReport(weather){
 
     
     if(weatherType.textContent == 'Clear') {
-        document.body.style.backgroundImage = "url('images/clear.jpg')";
+
+        document.body.style.backgroundImage = "url('weather_images/clear1.jpg')";
         
     } else if(weatherType.textContent == 'Clouds') {
 
-        document.body.style.backgroundImage = "url('images/cloud.jpg')";
+        document.body.style.backgroundImage = "url('weather_images/cloudy.jpg')";
         
     } else if(weatherType.textContent == 'Haze') {
 
-        document.body.style.backgroundImage = "url('images/cloud.jpg')";
+        document.body.style.backgroundImage = "url('weather_images/mist.jpg')";
+
+    } else if(weatherType.textContent == 'Mist') {
+
+        document.body.style.backgroundImage = "url('weather_images/mist.jpg')";
+
+    } else if(weatherType.textContent == 'Sunny') {
+
+        document.body.style.backgroundImage = "url('weather_images/sunny.jpg')";
         
-    }     else if(weatherType.textContent == 'Rain') {
+    } else if(weatherType.textContent == 'Rain') {
         
-        document.body.style.backgroundImage = "url('images/rain.jpg')";
+        document.body.style.backgroundImage = "url('weather_images/rain.jpg')";
+
+    } else if(weatherType.textContent == 'Drizzle') {
+        
+        document.body.style.backgroundImage = "url('weather_images/drizzle.jpg')";
         
     } else if(weatherType.textContent == 'Snow') {
         
-        document.body.style.backgroundImage = "url('images/snow.jpg')";
+        document.body.style.backgroundImage = "url('weather_images/snow.jpg')";
     
     } else if(weatherType.textContent == 'Thunderstorm') {
     
-        document.body.style.backgroundImage = "url('images/thunderstorm.jpg')";
+        document.body.style.backgroundImage = "url('weather_images/thunder.jpg')";
         
     } 
 }
