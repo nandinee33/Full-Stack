@@ -7,7 +7,68 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: lightgray;
+            width: 100%;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            text-transform: uppercase;
+            color: rgb(224, 20, 20);
+            font-weight: bold;
+            font-size: 60px;
+        }
+        .sec2{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        form{
+            background-color: white;
+            width: 350px;
+            height: 440px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            box-shadow: 0 0 8px 8px rgba(99, 98, 98, 0.2);
+
+        }
+        form .text-field{
+            border-bottom: 2px solid gray;
+            margin: 30px 0;
+            position: relative;
+        }
+        .text-field input{
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .text-field label{
+            position: absolute;
+            top: 30%;
+            left: 5px;
+            color: rgb(104, 102, 102);
+            font-size: 14px;
+            transition: .5s;
+        }
+        .text-field input:focus ~ label,
+        .text-field input:valid ~ label{
+            top: -7px;
+            color:gray;
+        }
+    </style>
 
 </head>
 <body>
