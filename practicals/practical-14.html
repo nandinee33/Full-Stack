@@ -28,6 +28,14 @@
             font-size: 60px;
         }
         .sec2{
+            /* display: flex;
+            justify-content: space-evenly;
+            align-items: center; */
+            width: 100%;
+        }
+        .main{
+            width: 32%;
+            float: left;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -262,6 +270,269 @@
         .form3part2 .icon{
             margin-left: 15px;
         }
+
+
+
+
+        @media(max-width:1100px){
+            body{
+            background-color: lightgray;
+            width: 100%;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            text-transform: uppercase;
+            color: rgb(224, 20, 20);
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .sec2{
+            /* display: flex;
+            justify-content: space-evenly;
+            align-items: center; */
+            width: 100%;
+        }
+        .main{
+            width: 100%;
+            float: left;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        form{
+            background-color: white;
+            width: 350px;
+            height: 440px;
+            border-radius: 5px;
+            /* box-sizing: border-box; */
+            box-shadow: 0 0 8px 8px rgba(99, 98, 98, 0.2);
+
+        }
+        form .text-field{
+            border-bottom: 2px solid gray;
+            margin: 30px 0;
+            position: relative;
+        }
+        .text-field input{
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .text-field label{
+            position: absolute;
+            top: 30%;
+            left: 5px;
+            color: rgb(104, 102, 102);
+            font-size: 14px;
+            transition: .5s;
+        }
+        .text-field input:focus ~ label,
+        .text-field input:valid ~ label{
+            top: -7px;
+            color:gray;
+        }
+
+
+        /* --------------form1--------------------- */
+        .form1part1{
+            background-image: linear-gradient(to right, orange,rgb(255, 81, 0));
+            width: 100%;
+            height: 120px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .form1part1 h3{
+            text-align: center;
+            padding-top: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        .form1part1 ul li{
+            list-style: none;
+            display: inline;
+        }
+        .form1part1 ul li a i{
+            padding: 15px;
+            color: white;
+            padding-top: 30px; 
+            font-size: 20px;
+        }
+        .form1icons{
+            margin-left: 95px;
+        }
+        .form1part2{
+            padding: 10px 40px;
+        }
+        .form1part2 .forget{
+            text-decoration: none;
+            color: gray;
+            float: right;
+            font-size: 15px;
+        }
+        .form1part2 .forget span{
+            color: rgb(85, 83, 83);
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .form1part2 .last{
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+        .last input{
+            border-radius: 20px;
+            padding: 10px 15px;
+            color: white;
+            background-color: rgba(85, 83,83);
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-size: 10px;
+            float: left;
+            margin-right: 11px;
+        }
+        .last p{
+            font-size: 13px;
+            color: gray;
+            padding-top: 5px;
+        }
+        .last p a{
+            text-decoration: none;
+            color: rgba(85, 85,83);
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+
+        /* ------------------form2-------------------- */
+        .form2-heading{
+            color: rgb(228, 41, 135);
+            text-align: center;
+            font-size: 20px;
+            padding-top: 20px;
+        }
+        .form2part1{
+            padding: 10px 40px;
+        }
+        .form2part1 .form2last1 p{
+            font-size: 13px;
+            margin-left: 30px;
+            margin-top: -16px;
+            color: rgba(85, 83,83);
+        }
+        .form2part1 .form2last1 p a{
+            text-decoration: none;
+            color: rgb(24, 177, 238);
+            font-weight: bold;
+        }
+        .form2part1 .form2last2{
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .form2part1 .form2last2 input{
+            color: white;
+            background-color: rgb(228,41,135);
+            border-radius: 20px;
+            padding: 10px 27px;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            float: left;
+            margin-right: 25px;
+        }
+        .form2part1 .form2last2 p{
+            font-size: 12px;
+            padding-top: 10px;
+        }
+        .form2part1 .form2last2 p a{
+            text-decoration: none;
+            color: rgb(24, 177, 238);
+            font-weight: bold;
+        }
+        .form2part2{
+            background-color: slategrey;
+            width: 100%;
+            height: 82px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .form2part2 ul li{
+            list-style: none;
+            display: inline;
+        }
+        .form2part2 ul li a i{
+            padding: 15px;
+            color: white;
+            padding-top: 30px; 
+            font-size: 20px;
+        }
+        .form2icons{
+            margin-left: 95px;
+        }
+
+
+        /* -----------------form3------------------------- */
+        .form3-heading{
+            color: black;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 20px;
+        }
+        .form3part1{
+            padding: 10px 40px;
+        }
+        .form3forget{
+            text-decoration: none;
+            color:rgb(24,117,248);
+            float: right;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .form3last{
+            margin-top: 80px;
+        }
+        .form3last input{
+            color: white;
+            background-image: linear-gradient(to right,rgb(24, 201, 245),rgb(42, 28, 245));
+            border-radius: 20px;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            outline: none;
+            text-decoration: none;
+        }
+        .form3part2 h3{
+            margin-top: 18px;
+            text-align: center;
+            font-size: 13px;
+            color: gray;
+            margin-bottom: 15px;
+        }
+        .form3part2 ul li{
+            list-style: none;
+            display: inline;
+        }
+        .form3icons{
+            margin-left: 60px;
+        }
+        .form3part2 ul li a i{
+            padding: 10px 25px;
+            border-radius: 20px;
+            color: rgb(24, 117, 248);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .form3part2 .icon{
+            margin-left: 15px;
+        }
+        }
     </style>
 
 </head>
@@ -275,104 +546,110 @@
     <section class="sec2">
 
         <!-- --------------------form 1------------------------ -->
-        <form action="">
-            <div class="form1part1">
-                <h3>Log in</h3>
-                <ul>
-                    <li><a href="#"><i class="fa fa-facebook form1icons"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                </ul>
-            </div>
-            
-            <div class="form1part2">
-                <div class="text-field">
-                    <input type="text" required>
-                    
-                    <label for="">Your email</label>
+        <div class="main">
+            <form action="">
+                <div class="form1part1">
+                    <h3>Log in</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook form1icons"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
                 </div>
-                <div class="text-field">
-                    <input type="password" required>
-                    <label for="">Your password</label>
+                
+                <div class="form1part2">
+                    <div class="text-field">
+                        <input type="text" required>
+                        
+                        <label for="">Your email</label>
+                    </div>
+                    <div class="text-field">
+                        <input type="password" required>
+                        <label for="">Your password</label>
+                    </div>
+                    <div>
+                        <a class="forget" href="">Forget <span>password?</span></a>
+                    </div>
+                    <div class="last">
+                        <input type="submit" value="LOG IN">
+                        <p>Dont have an account? <a class="sign" href="#">Sign up</a></p>
+                    </div>
                 </div>
-                <div>
-                    <a class="forget" href="">Forget <span>password?</span></a>
-                </div>
-                <div class="last">
-                    <input type="submit" value="LOG IN">
-                    <p>Dont have an account? <a class="sign" href="#">Sign up</a></p>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
         <!-- --------------------------form1 end---------------------------- -->
 
 
         <!-- --------------------------form2--------------------------- -->
-        <form action="">
+        <div class="main">
+            <form action="">
             
-            <h3 class="form2-heading">Sign up</h3>
-            
-            <div class="form2part1">
-                <div class="text-field">
-                    <input type="text" required>
-                    
-                    <label for="">Your email</label>
+                <h3 class="form2-heading">Sign up</h3>
+                
+                <div class="form2part1">
+                    <div class="text-field">
+                        <input type="text" required>
+                        
+                        <label for="">Your email</label>
+                    </div>
+                    <div class="text-field">
+                        <input type="password" required>
+                        <label for="">Your password</label>
+                    </div>
+                    <div class="form2last1">
+                        <input class="check" type="checkbox" name="" id="chk">
+                        <p>Accept the <a href="#">Terms and Conditions</a></p>
+                    </div>
+                    <div class="form2last2">
+                        <input type="submit" value="SIGN UP">
+                        <p>Have an account? <a class="sign" href="#">Log in</a></p>
+                    </div>
                 </div>
-                <div class="text-field">
-                    <input type="password" required>
-                    <label for="">Your password</label>
+                <div class="form2part2">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook form2icons"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
                 </div>
-                <div class="form2last1">
-                    <input class="check" type="checkbox" name="" id="chk">
-                    <p>Accept the <a href="#">Terms and Conditions</a></p>
-                </div>
-                <div class="form2last2">
-                    <input type="submit" value="SIGN UP">
-                    <p>Have an account? <a class="sign" href="#">Log in</a></p>
-                </div>
-            </div>
-            <div class="form2part2">
-                <ul>
-                    <li><a href="#"><i class="fa fa-facebook form2icons"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                </ul>
-            </div>
-        </form>
+            </form>
+        </div>
         <!-- ------------------------form2 end----------------- -->
 
 
         <!-- ----------------------form3----------------------- -->
-        <form action="">
+        <div class="main">
+            <form action="">
             
-            <h3 class="form3-heading">Sign in</h3>
-
-            <div class="form3part1">
-                <div class="text-field">
-                    <input type="text" required>
-                    
-                    <label for="">Your email</label>
+                <h3 class="form3-heading">Sign in</h3>
+    
+                <div class="form3part1">
+                    <div class="text-field">
+                        <input type="text" required>
+                        
+                        <label for="">Your email</label>
+                    </div>
+                    <div class="text-field">
+                        <input type="password" required>
+                        <label for="">Your password</label>
+                    </div>
+                    <div>
+                        <a class="form3forget" href="">Forget <span>password?</span></a>
+                    </div>
+                    <div class="form3last">
+                        <input type="submit" value="SIGN IN">
+                    </div>
                 </div>
-                <div class="text-field">
-                    <input type="password" required>
-                    <label for="">Your password</label>
+                <div class="form3part2">
+                    <h3>or Sign in with</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook form3icons"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter icon"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus icon"></i></a></li>
+                    </ul>
                 </div>
-                <div>
-                    <a class="form3forget" href="">Forget <span>password?</span></a>
-                </div>
-                <div class="form3last">
-                    <input type="submit" value="SIGN IN">
-                </div>
-            </div>
-            <div class="form3part2">
-                <h3>or Sign in with</h3>
-                <ul>
-                    <li><a href="#"><i class="fa fa-facebook form3icons"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter icon"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus icon"></i></a></li>
-                </ul>
-            </div>
-        </form>
+            </form>
+        </div>
         <!-- --------------------------form3 end--------------------------- -->
         
     </section>
