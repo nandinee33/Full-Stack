@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form input elements</title>
+
+    <style>
+        /* input{
+            width: 400px;
+        } */
+    </style>
+
+</head>
+<body>
+
+    <form action="welcome.html" method="GET">
+
+
+        <!-- by default text-box has 20 characters to be displayed on but if we want to chnage the width we cn use size attribute or we can set trhe width of input by applying css-->
+        <!-- applying readonly to any of the text box that means we can just read the content we can not edit it -->
+        <!-- if we apply disabled attribute to any of the text box that means we can not submit the value of that text box to the server -->
+        <!-- if we apply hidden attribute to any of the text box then that text box will not display on the screen but the deafult value of that text box will be submited to the server-->
+        
+
+
+        <label for="text-1">Text Box-1</label>
+        <input type="text" value="1000" id="text-1" name="text1" size="10" required>
+        <br><br>
+
+        <label for="text-2">Text Box-2</label>
+        <input 
+            type="text" 
+            id="text-2" 
+            name="text2" 
+            value="there is more text to be display in this box" 
+            size="40"
+            required>
+        <br><br>
+
+        <label for="password">password</label>
+        <input 
+            type="password" 
+            id="pass" 
+            name="pwd"
+            required
+            pattern="[A-Z][A-Za-z0-9]*[0-9][a-zA-Z0-9]*"
+            title="a valid password must contain alphabets and numbers , First charcter shoul be capital letter,alphabet and must contain a number and there is no speacial character"
+            >
+        <br>
+
+        <input type="checkbox" name="chk" onclick="showpwd()">Show Password
+        <br><br>
+
+
+        <label for="gender">Gender:</label>
+        <!-- here attribute should be same in all the fields so if we want our optioon button worked in combination we should have name attribute common in all the fields-->
+        <input type="radio" id="gender" name="gender" value="male">Male
+        <input type="radio" id="gender" name="gender" value="female" checked>Female
+        <input type="radio" id="gender" name="gender" value="others">other
+        <br><br>
+
+        <label for="technology">Technologies:</label>
+        <input type="checkbox" name="chk1" id="technology" value="C++">C++
+        <input type="checkbox" name="chk2" id="technology" value="java">Java
+        <input type="checkbox" name="chk3" id="technology" value="python">Python
+        <input type="checkbox" name="chk4" id="technology" value="fullstack">Fullstack
+        <br><br>
+
+        <label for="age">Age:</label>
+        <!-- here we set the max and min limit in age -->
+        <!-- bydefault step is 1 but we can change it -->
+        <input 
+            type="number" 
+            name="age" 
+            id="age" 
+            min="18" 
+            max="100"
+            step="2">
+        <br><br>
+
+        <label for="knowledge">Knoeledge level:</label>
+        <input 
+            type="range" 
+            name="knowledge" 
+            id="knowledge" 
+            min="0" 
+            max="50">
+        <br><br>
+
+        <label for="dob">D.O.B:</label>
+        <input type="date" name="dob" id="dob">
+        <br><br>
+
+        <label for="dot">D.O.T:</label>
+        <input type="time" name="dot" id="dot">
+        <br><br>
+
+        <label for="datetime">D.O.B. with time:</label>
+        <input type="datetime-local" name="datetime" id="datetime">
+        <br><br>
+
+        <label for="month">Month:</label>
+        <input type="month" name="month" id="month">
+        <br><br>
+
+        <label for="week">Week:</label>
+        <input type="week" name="week" id="week">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+
+        <label for="file">Upload your Documents:</label>
+        <!-- accept attribute is used to accept only those type of file format -->
+        <input type="file" name="file" id="file" accept=".pdf,.doc,.docx,.txt">
+        <br><br>
+
+        <label for="search">Search:</label>
+        <input type="search" name="search" id="search">
+        <br><br>
+
+        <label for="website">Website URL:</label>
+        <input type="url" name="website" id="website">
+        <br><br>
+
+        <input 
+            type="button" 
+            value="click me" 
+            onclick="alert('this is a button event')">
+        <br><br>
+
+        <input 
+            type="image" 
+            src="../images/Submit-Button-Forms.png" 
+            alt="submitbtn"
+            name="submitbutton">
+        <br><br>
+
+        <input type="reset" value="reset">
+        <input type="submit" value="submit">
+
+    </form>
+
+    <script>
+        function showpwd(){
+            var x = document.getElementById("pass");
+            if(x.type === 'password'){
+                x.type = "text";
+            }
+            else {
+                x.type = 'password';
+            }
+        }
+    </script>
+
+</body>
+</html>
