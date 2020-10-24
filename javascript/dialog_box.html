@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DialogBox</title>
+</head>
+<body>
+
+    <!-- this is inline Js -->
+    <button id="btn" onclick="alert('I am a Dialog Box')">Click Me</button>
+
+
+    <!-- 
+    Q.) Why here we are not using input submit button instead of button tag ??
+    Ans.) generally we are using input submit button when we want to send data to the server but here we didnot send any data to server we just click on the button so we use button tag 
+    -->
+
+
+    <!-- ------here hello is function----- -->
+    <button id="btn" onclick="hello()">Alert</button>
+
+    <!-- instead of writing a js alert box directly into the tag we can jsut call a function and inside that function we can call script tag -->
+    <script>
+        function hello()
+        {
+            var x = 10;
+            var y = 15;
+
+            // so alert box is also used to print the output
+            // here we use cancatanation operator
+            alert("Sum of two no = " + (x+y));
+        }
+    </script>
+
+
+    <!-- conferm dialog box -->
+    <button id="btn" onclick="hello1()">Conferm</button>
+    <script>
+        function hello1()
+        {
+            // conferm dialog box automaticlly gives two option ok and cancel
+            var x = confirm("Do you want to save the data");
+
+            // if x is true
+            if(x){
+                alert("Data saved succesfully");
+            }
+            else{
+                alert("Data not saved succesfully");
+            }
+        }
+    </script>
+
+
+    <!-- prompt dialog box -->
+    <button id="btn" onclick="hello2()">Prompt</button>
+    <script>
+        function hello2()
+        {
+            // Bedefault input is taken in string format thats why we have to convert string into integer using parseInt or Number
+            // instead of parseInt we can also use Number
+            var x = parseInt(prompt("Enter value of x"));
+            var y = parseInt(prompt("Enter value of y"));
+            if(x + y > 50){
+                alert(x + y);
+            }
+            else{
+                alert("Bad input");
+            }
+        }
+    </script>
+
+
+    <!-- noscript tag is used when our java script is diabled in the web browser -->
+    <noscript>
+        <p style="color: red;"> 
+            Your JavaScript is Disabled, Kindly Enable it to get benifits
+        </p>
+    </noscript>
+
+</body>
+</html>
