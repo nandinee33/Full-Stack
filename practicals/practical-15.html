@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        background-image: linear-gradient(to right, #dcdde1, #dadfe6, #d7e2eb, #d2e5ee, #cde8ef, #cdeaf0, #cdedf1, #cdeff1, #d2f1f4, #d6f4f6, #dbf6f9, #dff9fb);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+    h1{
+        text-align: center;
+        font-size: 60px;
+        text-transform: uppercase;
+        color: #032536;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+    }
+    .count{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .count #sub , .count #add{
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        font-size: 40px;
+        line-height: 30px;
+        cursor: pointer;
+        background-color:#ff6348;
+        color:black;
+        border: 2px solid gray;
+        border-radius: 3px;
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    }
+    .count input{
+        height: 60px;
+        width: 130px;
+        font-size: 55px;
+        border: none;
+        outline: none;
+        background: none;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Counter</h1>
+    <div class="count">
+        <button id="sub">-</button>
+        <input type="number" value="0" readonly>
+        <button id="add">+</button>
+    </div>
+
+    <script>
+        let btnAdd = document.querySelector('#add');
+        let btnSub = document.querySelector('#sub');
+        let input = document.querySelector('input');
+
+        btnAdd.addEventListener('click',()=>{
+            input.value = parseInt(input.value) + 1;
+        });
+        btnSub.addEventListener('click',()=>{
+            if(input.value <= 0)
+            {
+                input.disabled = true;
+                //input.value =0;
+                //input.setAttribute('disabled','disabled');
+            }
+            else
+            {
+                input.disabled = false;
+                input.value = parseInt(input.value) - 1;
+                //input.removeAttribute('disabled');
+            }
+        });
+        
+    </script>
+
+</body>
+</html>
