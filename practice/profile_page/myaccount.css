@@ -270,7 +270,7 @@ main{
     justify-content: center;
     align-items: center;
     color: #f3f4f6;
-    margin-bottom:30px;
+    margin-bottom:50px;
 }
 .sidebar_menu > h2{
     color: #3ea175;
@@ -302,18 +302,18 @@ main{
     margin-right: 10px;
     font-size: 18px;
 }
-.sidebar_logout{
+.sidebar_back{
     margin-top: 20px;
     padding: 10px;
-    color: #e65061;
+    color: #377fc2;
 }
-.sidebar_logout > a{
+.sidebar_back > a{
     text-decoration: none;
-    color: #e65061;
+    color: #377fc2;
     font-weight: 700;
     text-transform: uppercase;
 }
-.sidebar_logout > i{
+.sidebar_back > i{
     margin-right: 10px;
     font-size: 18px;
 }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js_event_handling</title>
+</head>
+
+<style>
+    #container{
+        width: 300px;
+        height: 200px;
+        background-color: blue;
+        margin: 10px auto;
+    }
+    button{
+        display: block;
+        margin: auto;
+    }
+</style>
+
+<body>
+
+    <div id="container"></div>
+
+
+    <!-----------1) html handler Attribute ----------->
+    <!-- <button onclick="myfun1()">Click Me</button>
+
+    <script>
+        function myfun1()
+        {
+            var x = document.getElementById("container");
+            x.style.background = "red";
+        }
+    </script> -->
+
+
+
+
+
+
+
+    <!-- -----------2) DOM level-1 javascript event handler-------------->
+
+    
+    <button>Click Me</button>
+
+    <!-- <script>
+        function myfun2()
+        {
+            var x = document.getElementById("container");
+            x.style.background = "pink";
+        }
+
+        var btn = document.querySelector("button");
+
+        // Function calling way 1
+        // here in Dom level 1 we directly use onclick . we can not take the help of  html attribute
+        btn.onclick = myfun2;
+
+        // way 2 by using anonymous function
+        btn.onclick =function(){
+            document.body.style.background = "grey";
+        };
+
+    </script> -->
+
+
+    <!-- there is problem with DOM level 1 ki ek baar me ek hi event chalega or agar do chahye jo recent hoga keval vahi dikhega  so if we want ki dono event ek sath chale so that is not possible in DOM level 1 then we have go with DOM level -2-->
+
+
+
+
+
+
+    <!-- ------------3) DOM level-2 Javascript Event Handler (add event listner)------------ -->
+    <!-- Dom level 2 can perform multiple functions on a single event -->
+
+    <script>
+        var box = document.getElementById("container");
+
+        box.addEventListener("mouseover", abc);
+        box.addEventListener("mouseover", abc1);
+
+        // 1st event
+        function abc()
+        {
+            box.style.background = "red";
+        }
+
+        // 2nd event
+        function abc1()
+        {
+            box.style.borderRadius = "15px";
+            box.style.border = " solid yellow 10px"
+            box.innerText = "This is a DOm Level 2 event handler"
+        }
+
+        // here we add a anonymous function as event but we can not remove it by removeEventListner becoz remove krte tym event ka name dena hota h but anonymous function ke to name hi ni hote
+        box.addEventListener("mouseout", function(){
+            box.style.background = "blue";
+            box.style.borderRadius = "0px";
+            box.style.border = "none";
+            box.style.color = "white";
+            box.style.textAlign = "center";
+        });
+
+
+
+
+
+
+        // to Remove event Listner
+        box.removeEventListener("mouseover", abc1);
+
+    </script>
+
+
+
+</body>
+</html>

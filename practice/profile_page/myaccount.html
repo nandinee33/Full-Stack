@@ -15,12 +15,14 @@
     
     <div class="container">
 
+
+
         <nav class="navbar">
             <div class="nav_icon" onclick="toggleSlider()">
                 <i class="fa fa-bars"></i>
             </div>
 
-            <!-- <div class="navbar_left">
+            <div class="navbar_left">
                 <a href="#">Dashboard</a>
             </div>
 
@@ -34,10 +36,12 @@
                 <a href="#">
                     <img width="30" src="avatar.svg" alt="">
                 </a>
-            </div> -->
+            </div>
         </nav>
 
 
+
+        
         <main>
 
             <div class="main_container">
@@ -48,6 +52,8 @@
                         <p>Welcome to admin dashboard</p>
                     </div>
                 </div>
+
+
 
 
                 <div class="main_cards">
@@ -86,23 +92,44 @@
                 </div>
 
 
+
+
                 <div class="charts">
                     <div class="charts_left">
                         <div class="charts_left_title">
                             <div>
                                 <h1>Daily Reports:</h1>
-                                <p>No Activity done Today</p>
                             </div>
                             <i class="fa fa-calendar-check-o"></i>
                         </div>
-                        <!-- <div id="apex1"></div> -->
+
+                        <div class="charts_right_cards">
+
+                            <div class="card1">
+                                <h1>Total</h1>
+                                <p>500</p>
+                            </div>
+                            <div class="card2">
+                                <h1>Individual</h1>
+                                <p>0</p>
+                            </div>
+                            <div class="card3">
+                                <h1>Emergency</h1>
+                                <p>350</p>
+                            </div>
+                            <div class="card4">
+                                <h1>Organization</h1>
+                                <p>150</p>
+                            </div>
+                        </div>
+                        
                     </div>
+
 
                     <div class="charts_right">
                         <div class="charts_right_title">
                             <div>
-                                <h1>Stats Reports:</h1>
-                                <!-- <p>cupertino ,California , USA</p> -->
+                                <h1>Status:</h1>
                             </div>
                             <i class="fa fa-usd"></i>
                         </div>
@@ -132,39 +159,29 @@
         </main>
 
 
+
+
+
+
         <div id="sidebar">
             <div class="sidebar_title">
-                <div class="sidebar_img">
+                <!-- <div class="sidebar_img">
                     <img src="../images_my/user.png" alt="">
-                    <!-- <h1>Find_Fortune</h1> -->
-                </div>
+                    <h1>Find_Fortune</h1>
+                </div> -->
                 <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
             </div>
 
+
+            <!-- ------------Sidebar----------------- -->
             <div class="sidebar_menu">
                 <div class="sidebar_link active_menu_link">
                     <i class="fa fa-home"></i>
                     <a href="#">Dashboard</a>
                 </div>
-                <!-- <div class="sidebar_link">
+                <div class="sidebar_link">
                     <i class="fa fa-user-secret"></i>
-                    <a href="#">My Account</a>
-                </div> -->
-                <div class="sidebar_link">
-                    <i class="fa fa-building-o"></i>
-                    <a href="#">Activities</a>
-                </div>
-                <!-- <div class="sidebar_link">
-                    <i class="fa fa-wrench"></i>
-                    <a href="#">Setting</a>
-                </div>
-                <div class="sidebar_link">
-                    <i class="fa fa-archive"></i>
-                    <a href="#">Widges</a>
-                </div> -->
-                <div class="sidebar_link">
-                    <i class="fa fa-sign-out"></i>
-                    <a href="#">Reports</a>
+                    <a href="#">About Us</a>
                 </div>
                 <div class="sidebar_link">
                     <i class="fa fa-calendar-check-o"></i>
@@ -173,6 +190,20 @@
                 <div class="sidebar_link">
                     <i class="fa fa-files-o"></i>
                     <a href="#">Feedback</a>
+                </div>
+
+                <h2>Situations</h2>
+                <div class="sidebar_link">
+                    <i class="fa fa-building-o"></i>
+                    <a href="#">Organization</a>
+                </div>
+                <div class="sidebar_link">
+                    <i class="fa fa-archive"></i>
+                    <a href="#">Emergency</a>
+                </div>
+                <div class="sidebar_link">
+                    <i class="fa fa-sign-out"></i>
+                    <a href="#">Individual</a>
                 </div>
 
                 <h2>Payroll</h2>
@@ -184,15 +215,14 @@
                     <i class="fa fa-briefcase"></i>
                     <a href="#">Transections</a>
                 </div>
-                <div class="sidebar_logout">
-                    <i class="fa fa-power-off"></i>
-                    <a href="#">Log out</a>
+                <div class="sidebar_back">
+                    <i class="fa fa-backward"></i>
+                    <a href="#">Go Back</a>
                 </div>
             </div>
+
         </div>
     </div>
-
-    <script src="myaccount.js"></script>
 
 </body>
 </html>
