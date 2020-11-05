@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+
+    <div id="container">
+        This is First Text
+        <p class="para" id="para1">This is First Paragraph</p>
+        This is Second Text
+        <h1>This is heading</h1>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+        <p class="para" id="para2">This is second  paragraph</p>
+    </div>
+
+
+
+    <script>
+
+        // used when we know element id like in para1, para2, container
+        // var x = document.getElementById("para1");
+        // console.log(x);
+
+
+        // if we want to access single element that did not have id like h1, ul, #para1, #para2, #container
+        // var y = document.querySelector("h1");
+        // console.log(y);
+
+
+        // if we want to access multiple elements that did not have id like li , p , .para
+        // so this gives the list of nodes
+        var z = document.querySelectorAll("li");
+        // console.log(z);
+        z[1].style.color="red";
+        z[0].innerHTML= "<b>Nandinee</b><button>click me</button>"
+
+
+
+        // with the help of js we can add id as well as class of and attribute
+        // var p = document.querySelector("h1");
+        // console.log(y);
+
+        // here we add id dynamically
+        //p.setAttribute("id", "head1");
+
+        // classList method is used to show all the classes of an element
+        // p.classList.add("header");
+
+        // to add multiple classes 
+        //p.classList.toggle("new_class");
+
+
+
+        // get element by class name
+        // var q = document.getElementsByClassName("para");
+        // console.log(q);
+
+
+        
+        
+        var r = document.getElementById("container");
+        // this tells all the list of child nodes in our container
+        //console.log(r.childNodes);
+
+
+        // now if we want to check paragraph 1 ke baad konsa element h 
+        // so this tells which is the next sibling after para1
+        // console.log(r.childNodes[1].nextSibling);
+
+        // if we want to display the textcontent of para1 next sibling
+        // console.log(r.childNodes[1].nextSibling.textContent);
+
+        // if we want to display the last child of container then
+        //console.log(r.lastChild);
+
+        // if we want to check the parent of lastchild
+        // console.log(r.lastChild.parentNode);
+
+        
+
+
+    </script>
+
+
+</body>
+</html>

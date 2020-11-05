@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerText-HTML-Content</title>
+</head>
+<body>
+
+    <div id="blog">
+        This element is <strong>strong</strong> and                 has some 
+        super fun
+        <code>code1</code>!
+        <!-- with the help of code tag text is seen in codded form -->
+
+    </div>
+
+    <script>
+        x = document.getElementById("blog");
+
+        console.log(x.innerHtml );
+        console.log(x.innerText);
+        console.log(x.textContent);
+        
+    </script>
+
+</body>
+</html>
