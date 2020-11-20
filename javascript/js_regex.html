@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex in JS</title>
+</head>
+<body>
+
+    <p>This is Regular Expression</p>
+    <button onclick="myfunction()">Click Me</button>
+    <p id="demo"></p>
+
+    <script>
+        function myfunction()
+        {
+            var str  = "Welcome to the page of the fullstack\n Welcome 123456\n welcome you welcome";
+
+            // here we create a pattern using shorthand method
+
+            // search only first 'the' word
+            // var pattrn  = /the/;
+
+            // search all the 'the' words
+            // var pattrn  = /the/gi;
+
+            // search the begining 'welcome'
+            // var pattrn  = /^welcome/gi;
+
+            // search the ending 'welcome'
+            // var pattrn  = /welcome$/gi;
+
+            // search 'welcome' at the begining of every line
+            // var pattrn  = /^welcome/gim;
+
+            // all a b c
+            // var pattrn  =  /[a-c]/gi;
+
+            // all except abc
+            // var pattrn  =  /[^a-c]/gi;
+
+            // all number from 0 to 9
+            // var pattrn  =  /[0-9]/gi;
+
+            // if pattern matches to the string 
+            var res = str.match(pattrn);
+
+            // then hum blank paragraph jo upar banya tha usme dikha denge
+            document.getElementById('demo').innerHTML = res;
+
+            // but here we see there the 2 'the' words but our patter only match with the first 'the' word beco match function only find pattern 
+            // hence we use modifiers to match all the patterns
+            
+        }
+    </script>
+
+</body>
+</html>
