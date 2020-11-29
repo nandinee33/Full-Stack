@@ -11,14 +11,17 @@
     <!-- materialised icons cdn -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
     <style>
         *{
             font-family: Arial, Helvetica, sans-serif;
         }
         body{
-            background-image: url(images/background-img.jpg);
+            background-image: url(images/bg-img.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: top center;
         }
         table,tr,td,th
         {
@@ -36,10 +39,10 @@
             background-color: white;
             border: 2px solid #34495e;
             box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px !important;
+            border-top-left-radius: 10px !important;
+            border-bottom-right-radius: 10px !important;
+            border-bottom-left-radius: 10px !important;
         }
         
         tr:nth-child(2) th
@@ -53,11 +56,11 @@
         }
         tr:first-child th
         {
-            background-color: #34495e;
+            background-color: #051d31;
             color: white;
             text-align: center;
-            border-top-right-radius: 8px;
-            border-top-left-radius: 8px;
+            border-top-right-radius: 8px !important;
+            border-top-left-radius: 8px !important;
         }
         .Unchecked
         {
@@ -69,8 +72,6 @@
         }
         .icon{
             color:#7f8c8d;
-            /* padding-left: 10px;
-            padding-right: 20px; */
         }
         .edit 
         {
@@ -93,11 +94,9 @@
             padding-left: 10px;
         }
         a{
-            text-decoration: none;
-            color:#7f8c8d ;
+            text-decoration: none !important;
+            color:#7f8c8d !important;
             font-weight: bold;
-            /* margin-right: 40px; */
-
         }
         a:hover{
             color: blue;
@@ -117,6 +116,7 @@
             padding-bottom: 20px;
             width: 88%;
             margin: 0 auto;
+            color: #00121b;
             margin-top: 40px;
             margin-bottom: 50px;
             font-size: 50px;
@@ -126,7 +126,7 @@
         p{
             font-size: 20px;
             text-align: justify;
-            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            background: radial-gradient(circle, rgba(238, 174, 202, 0.918) 0%, rgba(31, 167, 245, 0.904) 100%);
             padding: 30px ;
             border-radius: 8px;
             margin-top: 50px;
@@ -138,6 +138,9 @@
         }
         .data{
             margin-top: 60px;
+        }
+        .name{
+            padding-left: 250px;
         }
 
         
@@ -156,7 +159,7 @@
     
             <tr>
                 <th class="sno">Sno.</th>
-                <th>Practical Name</th>
+                <th class="name">Practical Name</th>
                 <th  class="links">Link</th>
                 <th class="status">Status</th>
                 <th class="tools">Tools</th>
@@ -290,10 +293,34 @@
                 <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
             </tr>
 
-            <tr>
+            <tr class="line">
                 <td class="serial">17</td>
                 <td>Create a Page with Live Clock with Dynamic Greeting Background and Data Stored in Browser Local Storage.</td>
                 <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-17/practical-17.html">Practical-17</a></td>
+                <td class="Unchecked">Un-Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+
+            <tr class="line">
+                <td class="serial">18</td>
+                <td>Create an HTML Form and Validate it with Javascript (Client-side Programming Language).</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-18/practical-18.html">Practical-18</a></td>
+                <td class="Unchecked">Un-Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+
+            <tr class="line">
+                <td class="serial">19</td>
+                <td>Create an HTML page with Multi-Step Form.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-19/practical-19.html">Practical-19</a></td>
+                <td class="Unchecked">Un-Checked</td>
+                <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
+            </tr>
+
+            <tr>
+                <td class="serial">20</td>
+                <td>Create a Responsive Layout using Bootstrap Grid System.</td>
+                <td><a href="https://nandinee33.github.io/Full-Stack/practicals/practical-20.html">Practical-20</a></td>
                 <td class="Unchecked">Un-Checked</td>
                 <td class="icon"><i class="material-icons edit">edit</i><i class="material-icons delete">delete</i></td>
             </tr>
