@@ -5,6 +5,7 @@
 - CSS3
 - JavaScript
 - Bootstrap
+- JQuery
 
 ## and the Practicals which I made using these frontend technologies.
 
