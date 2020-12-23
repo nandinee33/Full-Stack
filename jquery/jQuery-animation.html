@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Effects and Animation</title>
+
+    <script src="./jquery-download-file/jquery-3.5.1.js"></script>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <style>
+        #box2{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="text-center mt-3">Jquery Effects And Animations</h1>
+
+    <div id="container" class="container mt-5">
+        <hr>
+
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <button id="toggle">Toggle</button>
+
+        <hr>
+
+        <button id="btnFadeOut">Fade Out</button>
+        <button id="btnFadeIn">Fade In</button>
+        <button id="btnFadeTog">Fade Toggle</button>
+
+        <hr>
+
+        <button id="btnSlideUp">Slide Up</button>
+        <button id="btnSlideDown">Slide Down</button>
+        <button id="btnSlideTog">Slide Toggle</button>
+        <button class="btn btn-danger" id="btnStop">Stop</button>
+
+        <hr>
+        
+        <div id="box" class="bg-dark p-3 w-25"><h1 class="text-center text-light">Hello World</h1></div>
+
+        <hr>
+
+        <button id="moveRight">Move Right</button>
+        <button id="moveLeft">Move Left</button>
+        <button id="moveAround">Move Around</button>
+
+        <hr>
+
+        <div id="box2" class="mt-3 position-relative"></div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+
+            $('#show').click(function(){
+                $('#box').show();
+            });
+
+            $('#hide').click(function(){
+                $('#box').hide();
+            });
+
+            $('#toggle').click(function(){
+                $('#box').toggle();
+            });
+
+            $('#btnFadeOut').click(function(){
+                $('#box').fadeOut(3000);
+            });
+
+            $('#btnFadeIn').click(function(){
+                $('#box').fadeIn(3000);
+            });
+
+            $('#btnFadeTog').click(function(){
+                $('#box').fadeToggle(2000);
+            });
+
+            $('#btnSlideUp').click(function(){
+                $('#box').slideUp(1000);
+            });
+
+            $('#btnSlideDown').click(function(){
+                $('#box').slideDown(1000);
+            });
+
+            $('#btnSlideTog').click(function(){
+                $('#box').slideToggle(1000);
+            });
+
+            $('#btnStop').click(function(){
+                $('#box').stop(1000);
+            });
+
+            $('#moveRight').click(function(){
+                $('#box2').animate({
+                    left: 500,
+                    height: "300px",
+                    width: "300px",
+                    opacity: "0.5"
+                });
+            });
+
+            $('#moveLeft').click(function(){
+                $('#box2').animate({
+                    left: 0,
+                    height: "150px",
+                    width: "150px",
+                    opacity: "1"
+                });
+            });
+
+            $('#moveAround').click(function(){
+                var box = $('#box2');
+
+                box.animate({
+                    left: 200
+                });
+                box.animate({
+                    top: 200
+                });
+                box.animate({
+                    left:0,
+                    top:200
+                });
+                box.animate({
+                    left:0,
+                    top:0
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>

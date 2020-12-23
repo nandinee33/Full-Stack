@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-Events</title>
+
+    <script src="./jquery-download-file/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery-Form-Events</h1>
+        <hr>
+
+        <form id="myform">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <select id="age" class="form-control">
+                    <option value="">Select Age</option>
+                    <option value="age<18">age<18</option>
+                    <option value="age<40">age<40</option>
+                    <option value="age<60">age<60</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary mt-3">
+
+
+            <button class="copy mt-3 btn btn-secondary">Copy to clipboard</button>
+        </form>
+
+        <!-- this div is used in change event -->
+        <div class="content border border-primary mt-3 p-3"></div>
+
+    </div>
+
+    <script>
+        // we use ready function here so that we can also run this script in head section also
+        $(document).ready(function(){
+
+            // form focus event
+            $('#username , #password , #age').focus(function(){
+                $(this).css('background-color','lightpink')
+            });
+
+
+            // form blur event
+            // blur works when jb hum focus kr rhe h or hat jaye then color remove
+            $('#username , #password , #age').blur(function(){
+                $(this).css('background-color','')
+            });
+            
+
+            // change Event
+            // we use change button in radio ,checkbox, option
+            $('#age').change(function(){
+                var a = $(this).val();
+                // here .html is work same as innerHTML in js
+                // fadeout means will disapplear after 3 sec
+                $('.content').html("Your Age: " + a).show().fadeOut(3000);
+            });
+
+
+            // click Event
+            // when we click on it it will copy 
+            $('.copy').click(function(){
+                $('#username').select();
+                document.execCommand("copy");
+                alert("Data Copied: " +$('#username').val());
+                // text($('#username').val()).show(8000);
+            });
+
+
+            // submit event
+            $('#myform').submit(function(){
+                alert("Data Submit Successfully");
+            });
+
+        });
+    </script>
+
+</body>
+</html>

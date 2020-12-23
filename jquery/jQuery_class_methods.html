@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-class-Methods</title>
+
+    <script src="./jquery-download-file/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery-Methods</h1>
+        <hr>
+
+        <h2 class="text-center">AddClass | RemoveClass | ToggleClass</h2>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <h3 class="text-left">Text Heading</h3>
+            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum quae facilis expedita quas. Enim vel, <span class="text-danger">tempore</span> ea mollitia porro sunt est. Illum sit rem laudantium ab soluta quia incidunt dolores architecto vitae expedita, facere perferendis dicta labore voluptatem odio. Voluptatibus tenetur libero magnam ut id! Totam itaque dolorum aspernatur!</p>
+        </div>
+        <div class="buttons text-center">
+            <button class="AddClass btn btn-primary mt-3">AddClass</button>
+            <button class="RemoveClass btn btn-danger mt-3">RemoveClass</button>
+            <button class="ToggleClass btn btn-success mt-3">ToggleClass</button>
+        </div>
+    </div>
+
+
+    <script>
+        // we use ready function here so that we can also run this script in head section also
+        $(document).ready(function(){
+
+            $('.AddClass').click(function(){
+                $('.box').addClass('bg-warning');
+            });
+
+            $('.RemoveClass').click(function(){
+                $('.box').removeClass('bg-warning');
+            });
+
+            $('.ToggleClass').click(function(){
+                $('.box').toggleClass('bg-warning');
+                $('.box').toggleClass('text-info');
+            });
+        
+        });
+    </script>
+
+</body>
+</html>

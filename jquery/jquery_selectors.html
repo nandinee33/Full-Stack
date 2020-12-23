@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Selectors</title>
+
+    <!-- link jquery file -->
+    <script src="./jquery-download-file/jquery-3.5.1.js"></script>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery Selectors</h1>
+        <hr>
+        <h2 id="heading1">Heading-1</h2>
+        <p id="para1" class="text-justify">Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Nulla provident neque in, tenetur debitis tempora aperiam totam animi illo pariatur!</p>
+
+        <h2 class="heading2">Heading-2</h2>
+        <p class="para2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Nulla</span> provident neque in, tenetur debitis tempora aperiam totam animi illo pariatur!</p>
+        
+        <span>consectetur</span> 
+
+        <ul>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+
+        <input class="btn btn-primary" type="button" value="Button">
+        <input class="btn btn-success" type="submit" value="submit">
+        <!-- <input class="form-control d-inline w-50" type="text"> -->
+        <input class="form-control" type="text">
+
+        <a href="http://twitter.com">twitter</a>
+        <a href="http://facebook.com">facebook</a>
+    </div>
+    <div class="mb-5"></div>
+
+
+    <script>
+        $(document).ready(function(){
+            // hide method is used to make the content disappear
+            $('#heading1').hide();
+            // $('#heading1, #para1').hide();
+            // $('h2, p').hide();
+
+            // targeting p child span element and applying css to it
+            $('p span').css('color','red')
+            $('p span').css({'color':'red','font-size':'30px'});
+
+            // unordered list first and last elemnt color is blue
+            $('ul li:first').css('color','blue');
+            $('ul li:last').css('color','blue');
+
+            // even odd based on the index value
+            // $('li:even').css('background-color','yellow');
+            // $('li:odd').css('background-color','grey');
+
+
+            // 3X0 = 0   ,  3X1= 3 so 3rd element  , 3X2 = 6 so 6th element
+            $('li:nth-child(3n').css('list-style','none');
+
+            // Target from elements
+            // button is the type
+            // $(':button').hide();
+            // $(':submit').hide();
+            //$(':text').hide();
+            $(':input[type=text]').hide();
+
+            // targeting based on attribute
+            // $('a[href]').css('color','red');
+            // targeting based on attribute value
+            $('a[href = "http://facebook.com"]').css('color','red');
+            // works same remove anchor tag or not
+            //$('[href = "http://facebook.com"]').css('color','red');
+        });
+    </script>
+
+</body>
+</html>

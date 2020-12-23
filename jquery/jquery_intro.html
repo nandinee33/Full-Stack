@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Introduction and implemetation</title>
+
+    <!--ways to adding jquery to page -->
+
+        <!---- method-1  Download JQuery Source file and link with the document----->
+        <!-- <script src="./jquery-download-file/jquery-3.5.1.js"></script> -->
+
+        <!----- method-2  using internet based CDN file ----->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <!--ways to writing jquery statements in page -->
+
+    <!-- <script>
+        method-1  in header section
+    </script> -->
+
+
+    <!-- <script>
+        var b = $('h1').html();
+        alert(b);
+    </script> -->
+
+
+    <!-- if we want our jquery code will run perfectly in header section also then we will use ready funtion -->
+    <script>
+        $(document).ready(function(){
+            var b = $('h1').html();
+            alert(b);
+        });
+    </script>
+    
+</head>
+<body>
+    
+    <!-- <script>
+        method-2  in body section
+    </script> -->
+
+
+    <h1>this is jquery page</h1>
+
+    <script>
+        //javascript code
+        // var a = document.querySelector('h1').innerHTML;
+        // alert(a);
+
+        //jquery
+        // $ is basically used for telling us that we are using jquery
+        // var b = $('h1').html();
+        // alert(b);
+    </script>
+
+</body>
+</html>

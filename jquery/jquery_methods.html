@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-Methods</title>
+
+    <script src="./jquery-download-file/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery-Methods</h1>
+        <hr>
+
+        <h2 class="text-center">Getter | Setter</h2>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <h3 class="text-left">Text Heading</h3>
+            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum quae facilis expedita quas. Enim vel, <span class="text-danger">tempore</span> ea mollitia porro sunt est. Illum sit rem laudantium ab soluta quia incidunt dolores architecto vitae expedita, facere perferendis dicta labore voluptatem odio. Voluptatibus tenetur libero magnam ut id! Totam itaque dolorum aspernatur!</p>
+        </div>
+        <button class="setter btn btn-danger mt-3">Setter</button>
+
+        <form id="myform" class="mt-5">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control">
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+    
+            <input type="submit" value="submit" class="btn btn-primary mt-3">
+        </form>
+    </div>
+
+    
+
+    <script>
+        // we use ready function here so that we can also run this script in head section also
+        $(document).ready(function(){
+
+                        // Getter Method
+
+            // text method
+            // if we want to see only content inside all these
+
+            // if we want everything inside the body
+            // var a = $('.body').text();
+
+            // if we want everything inside the box
+            var a = $('.box').text();
+
+            // if we want only paragraph inside the box
+            // var a = $('.box p').text();
+
+            // if we want only h3 inside the box
+            // var a = $('.box h3').text();
+
+            console.log(a);
+
+
+            // html method
+            // if we want to see entire content along with tags inside all these
+
+            // if we want everything inside the box
+            var b = $('.box').html();
+
+            // if we want only paragraph inside the box
+            // var b = $('.box p').html();
+
+            // if we want only h3 inside the box
+            // var b = $('.box h3').html();
+
+            console.log(b);
+
+
+            // attribute method
+            // if we want what attribute element has 
+
+            // if we want the class attributes inside box
+            var c = $('.box').attr('class');
+
+            // var c = $('#myform div').attr('class');
+
+            console.log(c);
+
+
+            // value Method
+            // value method perform on form becoz values comes from form
+            $('#myform').submit(function(){
+                // val is used to get the value of that input
+                var uname = $('#username').val();
+                var pwd = $('#password').val();
+                alert("Your Credentials are: "+ '\nUsername :' + uname + '\nPassword :' + pwd);
+            });
+
+
+
+
+
+
+                          // Setter Method
+
+            // setter method is almost similar . the only difference is when we call setter method we have to pass some value
+
+            // click event
+            $('.setter').click(function(){
+                // when we use text it will display the things in text
+                $('.box h3').text("Heading Changed");
+                // when we use html it will display the things in tag and text
+                $('.box p').html("Changing this paragraph <br> <a class = 'btn btn-success mt-2' href='#'>link</a>");
+                $('.box a').attr('href','http://google.com');
+            });
+
+
+            // setting the values in input
+            $('#username').val('Nandinee');
+            $('#password').val('Naina');
+
+
+        });
+    </script>
+
+</body>
+</html>

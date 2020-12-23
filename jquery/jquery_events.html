@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-Events</title>
+
+    <script src="./jquery-download-file/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery-Events</h1>
+        <hr>
+
+        <h2 class="text-center">1. Mouse Events</h2>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minima enim voluptates nulla odit sed accusantium animi ab fuga, aliquid repellat aspernatur illo consequuntur at quod, iste hic sequi dolorem. Ut aperiam eveniet nemo iste, aut totam atque fuga, ad, eaque quas quaerat officiis eos suscipit obcaecati possimus illum animi?</p>
+        </div>
+        <hr>
+
+        <h2 class="text-center">2. Keyboard Events</h2>
+        <ul class="list-unstyled p-3 text-center border border-danger">
+            <li>Keypress All Textual keys</li>
+            <li>Keyup All Keys</li>
+            <!-- function keys are ctrl shift key alt key delete -->
+            <li>Keydown All Functional keys</li>
+        </ul>
+        <hr>
+
+        
+
+    </div>
+
+    <script>
+        // we use ready function here so that we can also run this script in head section also
+        $(document).ready(function(){
+
+            // mouse click event
+            $('.box').click(function(){
+                // this.css()
+                $('.box').css('background-color','lightpink');
+            });
+
+
+            // mouse double click event
+            $('.box').dblclick(function(){
+                $(this).css('background-color','lightblue');
+            });
+
+
+            // contextmenu event
+            // whenever we right click menu will appear then box color will change
+            $('.box').contextmenu(function(){
+                $(this).css({'background-color':'orange', 'color':'red'});
+            });
+
+
+            // mouse enter event
+            // whenever we enters in the box color will change
+            $('.box').mouseenter(function(){
+                $(this).css({'background-color':'lightgrey', 'color':'white'});
+            });
+
+
+            // mouse leave event
+            // whenever we leave the box color will change
+            $('.box').mouseleave(function(){
+                $(this).css({'background-color':'lightgreen', 'color':'white'});
+            });
+
+
+            // Keyboard keypress events
+            // wheneven we press any key to write color will chnage
+            $('body').keypress(function(){
+                $(this).css('background-color','#40E0D0')
+            });
+
+
+            // Keyboard keyup events
+            // wheneven we another key after pressing one key to write color will chnage
+            $('body').keyup(function(){
+                $(this).css('background-color','#CD5C5C')
+            });
+
+
+            // Keyboard keydown events
+            // wheneven we another key after pressing one key to write color will chnage
+            $('body').keydown(function(){
+                $(this).css('background-color','#C0C0C0')
+            });
+
+        });
+    </script>
+
+</body>
+</html>
